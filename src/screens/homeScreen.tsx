@@ -1,4 +1,7 @@
 import React, {useState, useContext, useMemo, useEffect, useRef} from 'react';
+import {useNavigation} from '@react-navigation/native';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {RootStackParamList} from './RootStackPrams';
 import {
   View,
   Text,
@@ -9,30 +12,23 @@ import {
   StyleSheet,
   Keyboard,
   TouchableHighlight,
-  ToastAndroid
+  ToastAndroid,
+  Button
 } from 'react-native';
 import {AsyncStorage} from 'react-native';
-
-import Icons from 'react-native-vector-icons/MaterialIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import HidePasswordIcon from 'react-native-vector-icons/Feather';
-import ShowPasswordIcon from 'react-native-vector-icons/Feather';
-
+import Icons from 'react-native-vector-icons/MaterialIcons';
 import {PermissionsAndroid} from 'react-native';
-
-// import { RNCamera } from 'react-native-camera'
 import * as ImagePicker from 'react-native-image-picker';
-
-
-// import { PESDK } from 'react-native-photoeditorsdk';
 import {VESDK, VideoEditorModal, Configuration} from 'react-native-videoeditorsdk';
-
 
 
 const {width, height} = Dimensions.get('screen');
 
-export default ({navigation}: any) => {
+type authScreenProp = StackNavigationProp<RootStackParamList, 'Home'>;
 
+function HomeScreen() {
+  const navigation = useNavigation<authScreenProp>();
   const [email, setEmail] = useState<any>();
   const [password, setPassword] = useState<any>();
   const [loading, setLoading] = useState(false);
@@ -41,25 +37,8 @@ export default ({navigation}: any) => {
   const [fcmDeviceToken, setFcmDeviceToken] = useState<any>('');
   const [passwordVisibilty, setPasswordVisibility] = useState<any>(false);
   const [load, setLoad] = useState(false);
-  
-  const getFCMDeviceTokenFromLocal = async () => {
-    return new Promise((resolve, reject) => {
-      AsyncStorage.getItem('fcmToken')
-        .then((res) => {
-          console.log('response is===>', res);
-          if (res !== null) {
-            const result = res;
-            setFcmDeviceToken(result);
-            resolve(res);
-          } else {
-            resolve(false);
-          }
-        })
-        .catch((err) => reject(err));
-    });
-  };
 
- const selecselectVideotVideo = () => {
+ const selectVideo = () => {
   let options:any = {
     storageOptions: {
       skipBackup: true,
@@ -75,7 +54,6 @@ export default ({navigation}: any) => {
     } else if (res.customButton) {
       console.log('User tapped custom button: ', res.customButton);
       ToastAndroid.show(res.customButton, ToastAndroid.SHORT);
-      // PESDK.openEditor(require("../assets/video/video1.mp4"));
     } else {
       const source = { uri: res.uri };
       console.log('response', JSON.stringify(res));
@@ -131,7 +109,6 @@ export default ({navigation}: any) => {
         console.log('ImagePicker Error: ', res.error);
       } else if (res.customButton) {
         console.log('User tapped custom button: ', res.customButton);
-        // alert(res.customButton);
         ToastAndroid.show(res.customButton, ToastAndroid.SHORT);
       } else {
         const source = { uri: res.uri };
@@ -141,76 +118,85 @@ export default ({navigation}: any) => {
 
   }
   
+
   return (
     <ImageBackground source={require("../assets/background/bg1.png")} style={{width:width,height:height}}> 
-      <View style={loginStyle.container}>
-        {/* <VideoRecorder ref={cameraRef} /> */}
-        <View style={loginStyle.footer}> 
-        <TouchableOpacity
-          style={[
-            loginStyle.loginButton,
-            {backgroundColor: email && password ? '#fff' : '#0000'},
-          ]}
-          onPress={() => {
-            requestCameraPermission()
-         //   navigation.navigate('CustomizeSoundScape', { title: 'Ambience Music', loaded: false});
+    <View style={loginStyle.container}>
+      <View style={loginStyle.footer}> 
+      <TouchableOpacity
+        style={[
+          loginStyle.loginButton,
+          {backgroundColor: email && password ? '#fff' : '#0000'},
+        ]}
+        onPress={() => {
+          requestCameraPermission()
+        }}>
+        <Text
+          style={{
+            fontSize: 18,
+            padding: 10,
+            color: 'white',
+            fontWeight: 'bold',
+            backgroundColor:'#5b57cf',
+            borderRadius:12,
           }}>
-          <Text
-            style={{
-              fontSize: 18,
-              padding: 10,
-              color: 'white',
-              fontWeight: 'bold',
-              backgroundColor:'#5b57cf',
-              borderRadius:12,
-            }}>
-            <Ionicons
-            name={'ios-videocam-outline'}
+          {/* <Ionicons
+          name={'ios-videocam-outline'}
+          style={loginStyle.headerIconStyle}
+          /> */}
+           <Icons
+            name={'markunread'}
+            size={18}
+            color={'white'}
             style={loginStyle.headerIconStyle}
-            />
-              &nbsp;&nbsp;&nbsp;&nbsp;Record New Video
-          </Text>
-        </TouchableOpacity>
-        
-
-        <TouchableOpacity
-          style={[
-            loginStyle.loginButton,
-            {backgroundColor: email && password ? '#fff' : '#0000'},
-          ]}
-          onPress={() => {
-            selecselectVideotVideo()
-          }}>
-          <Text
-            style={{
-              fontSize: 18,
-              padding: 10,
-              color: 'black',
-              fontWeight: 'bold',
-              backgroundColor:'white',
-              borderRadius:12,
-              borderBottomWidth:2,
-              borderTopWidth:2,
-              borderLeftWidth:2,
-              borderRightWidth:2,
-              borderColor:'#5b57cf',
-            }}>
-              <Ionicons
-            name={'ios-videocam-outline'}
-            style={loginStyle.headerIconStyle2}
           />
-              &nbsp;&nbsp;&nbsp;&nbsp;Choose from Library
-          </Text>
-        </TouchableOpacity>
-     
-          </View>
-      </View>
-      </ImageBackground>
-  );
-};
+            &nbsp;&nbsp;&nbsp;&nbsp;Record New Video
+        </Text>
+      </TouchableOpacity>
+      
 
-function errorFormatter(message: String) {
-  return message.slice(message.indexOf(' '));
+      <TouchableOpacity
+        style={[
+          loginStyle.loginButton,
+          {backgroundColor: email && password ? '#fff' : '#0000'},
+        ]}
+        onPress={() => {
+          selectVideo()
+        }}>
+        <Text
+          style={{
+            fontSize: 18,
+            padding: 10,
+            color: 'black',
+            fontWeight: 'bold',
+            backgroundColor:'white',
+            borderRadius:12,
+            borderBottomWidth:2,
+            borderTopWidth:2,
+            borderLeftWidth:2,
+            borderRightWidth:2,
+            borderColor:'#5b57cf',
+          }}>
+            <Ionicons
+          name={'ios-videocam-outline'}
+          style={loginStyle.headerIconStyle2}
+        />
+            &nbsp;&nbsp;&nbsp;&nbsp;Choose from Library
+        </Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity  onPress={() => {
+          navigation.navigate('Edit')
+        }}>
+        <Text>
+          View Edit Screen
+        </Text>
+      </TouchableOpacity>
+   
+        </View>
+    </View>
+    </ImageBackground>
+);
 }
 
 const loginStyle = StyleSheet.create({
@@ -219,7 +205,7 @@ const loginStyle = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: "transparent",
-    marginTop:-45
+    marginTop:-125
   },
 
   footer:{
@@ -328,3 +314,5 @@ const loginStyle = StyleSheet.create({
     alignSelf: 'center',
   },
 });
+
+export default HomeScreen;
