@@ -36,9 +36,9 @@ public class IMGLYEvents extends ly.img.android.pesdk.backend.model.state.manage
              
     public static final String EditorShowState_LAYER_TOUCH_START="EditorShowState.LAYER_TOUCH_START";
 
-    public static final String FocusSettings_MODE="FocusSettings.MODE";
-
     public static final String TextDesignLayerSettings_PADDING="TextDesignLayerSettings.PADDING";
+
+    public static final String FocusSettings_MODE="FocusSettings.MODE";
 
     public static final String OverlaySettings_STATE_REVERTED="OverlaySettings.STATE_REVERTED";
 
@@ -64,9 +64,9 @@ public class IMGLYEvents extends ly.img.android.pesdk.backend.model.state.manage
 
     public static final String FilterSettings_INTENSITY="FilterSettings.INTENSITY";
 
-    public static final String TextLayerSettings_STATE_REVERTED="TextLayerSettings.STATE_REVERTED";
-
     public static final String FilterSettings_STATE_REVERTED="FilterSettings.STATE_REVERTED";
+
+    public static final String TextLayerSettings_STATE_REVERTED="TextLayerSettings.STATE_REVERTED";
 
     public static final String ImageStickerLayerSettings_FLIP_VERTICAL="ImageStickerLayerSettings.FLIP_VERTICAL";
 
@@ -270,17 +270,17 @@ public class IMGLYEvents extends ly.img.android.pesdk.backend.model.state.manage
 
     public static final String LayerListSettings_LAYER_LIST="LayerListSettings.LAYER_LIST";
 
-    public static final String UiConfigAspect_CONFIG_DIRTY="UiConfigAspect_CONFIG_DIRTY";
-
     public static final String TextDesignLayerSettings_PLACEMENT_INVALID="TextDesignLayerSettings.PLACEMENT_INVALID";
+
+    public static final String UiConfigAspect_CONFIG_DIRTY="UiConfigAspect_CONFIG_DIRTY";
 
     public static final String TextLayerSettings_FLIP_VERTICAL="TextLayerSettings.FLIP_VERTICAL";
 
     public static final String BrushSettings_STATE_REVERTED="BrushSettings.STATE_REVERTED";
 
-    public static final String ColorAdjustmentSettings_HIGHLIGHT="ColorAdjustmentSettings.HIGHLIGHT";
-
     public static final String TextLayerSettings_COLOR_FILTER="TextLayerSettings.COLOR_FILTER";
+
+    public static final String ColorAdjustmentSettings_HIGHLIGHT="ColorAdjustmentSettings.HIGHLIGHT";
 
     public static final String HistoryState_HISTORY_CREATED="HistoryState.HISTORY_CREATED";
 
@@ -302,9 +302,9 @@ public class IMGLYEvents extends ly.img.android.pesdk.backend.model.state.manage
 
     public static final String TrimSettings_END_TIME="TrimSettings.END_TIME";
 
-    public static final String FocusSettings_STATE_REVERTED="FocusSettings.STATE_REVERTED";
-
     public static final String TextDesignLayerSettings_EDIT_MODE="TextDesignLayerSettings.EDIT_MODE";
+
+    public static final String FocusSettings_STATE_REVERTED="FocusSettings.STATE_REVERTED";
 
     public static final String TextDesignLayerSettings_STATE_REVERTED="TextDesignLayerSettings.STATE_REVERTED";
 
@@ -330,17 +330,17 @@ public class IMGLYEvents extends ly.img.android.pesdk.backend.model.state.manage
 
     public static final String VideoState_VIDEO_SELECTED="VideoState.VIDEO_SELECTED";
 
-    public static final String ColorAdjustmentSettings_TEMPERATURE="ColorAdjustmentSettings.TEMPERATURE";
+    public static final String FrameSettings_FRAME_CONFIG="FrameSettings.FRAME_CONFIG";
 
     public static final String TextDesignLayerSettings_CONFIG="TextDesignLayerSettings.CONFIG";
 
-    public static final String FrameSettings_FRAME_CONFIG="FrameSettings.FRAME_CONFIG";
+    public static final String ColorAdjustmentSettings_TEMPERATURE="ColorAdjustmentSettings.TEMPERATURE";
 
     public static final String UiConfigFilter_CONFIG_DIRTY="UiConfigFilter_CONFIG_DIRTY";
 
-    public static final String ColorAdjustmentSettings_SATURATION="ColorAdjustmentSettings.SATURATION";
-
     public static final String ImageStickerLayerSettings_COLOR_FILTER="ImageStickerLayerSettings.COLOR_FILTER";
+
+    public static final String ColorAdjustmentSettings_SATURATION="ColorAdjustmentSettings.SATURATION";
 
     public static final String LoadState_SOURCE_IS_UNSUPPORTED="LoadState.SOURCE_IS_UNSUPPORTED";
 
@@ -390,17 +390,17 @@ public class IMGLYEvents extends ly.img.android.pesdk.backend.model.state.manage
 
     public static final String UiStateMenu_ACCEPT_AND_LEAVE="UiStateMenu.ACCEPT_AND_LEAVE";
 
-    public static final String FocusSettings_POSITION="FocusSettings.POSITION";
-
     public static final String UiStateVideoLibrary__SELECTED_CATEGORY_CHANGED="UiStateVideoLibrary..SELECTED_CATEGORY_CHANGED";
+
+    public static final String FocusSettings_POSITION="FocusSettings.POSITION";
 
     public static final String TextDesignLayerSettings_FLIP_VERTICAL="TextDesignLayerSettings.FLIP_VERTICAL";
 
     public static final String LayerListSettings_BACKGROUND_COLOR="LayerListSettings.BACKGROUND_COLOR";
 
-    public static final String ColorAdjustmentSettings_BRIGHTNESS="ColorAdjustmentSettings.BRIGHTNESS";
-
     public static final String TextDesignLayerSettings_SEED="TextDesignLayerSettings.SEED";
+
+    public static final String ColorAdjustmentSettings_BRIGHTNESS="ColorAdjustmentSettings.BRIGHTNESS";
 
     public static final String TextDesignLayerSettings_POSITION="TextDesignLayerSettings.POSITION";
 
@@ -414,69 +414,69 @@ public class IMGLYEvents extends ly.img.android.pesdk.backend.model.state.manage
 
 public void init(ly.img.android.pesdk.backend.model.state.manager.SettingsHolderInterface settingsHolder) {
         
-    new ly.img.android.pesdk.ui.transform.INIT(settingsHolder);
-            
-    new ly.img.android.pesdk.ui.all.INIT(settingsHolder);
-            
-    new ly.img.android.pesdk.backend.frame.INIT(settingsHolder);
-            
-    new ly.img.android.pesdk.ui.INIT(settingsHolder);
-            
-    new ly.img.android.pesdk.ui.frame.INIT(settingsHolder);
-            
-    new ly.img.android.pesdk.ui.photo_main.INIT(settingsHolder);
-            
-    new ly.img.android.pesdk.ui.video_composition.INIT(settingsHolder);
-            
-    new ly.img.android.pesdk.ui.sticker.INIT(settingsHolder);
-            
-    new ly.img.android.pesdk.assets.filter.basic.INIT(settingsHolder);
-            
-    new ly.img.android.pesdk.ui.filter.INIT(settingsHolder);
-            
     new ly.img.android.pesdk.assets.font.text_design.INIT(settingsHolder);
-            
-    new ly.img.android.pesdk.backend.overlay.INIT(settingsHolder);
-            
-    new ly.img.android.pesdk.assets.frame.basic.INIT(settingsHolder);
-            
-    new ly.img.android.pesdk.ui.video_library.INIT(settingsHolder);
             
     new ly.img.android.pesdk.ui.text_design.INIT(settingsHolder);
             
-    new ly.img.android.pesdk.backend.text_design.INIT(settingsHolder);
-            
-    new ly.img.android.pesdk.backend.sticker_smart.INIT(settingsHolder);
-            
-    new ly.img.android.pesdk.assets.sticker.shapes.INIT(settingsHolder);
-            
-    new ly.img.android.pesdk.assets.font.basic.INIT(settingsHolder);
-            
-    new ly.img.android.pesdk.assets.sticker.animated.INIT(settingsHolder);
-            
-    new ly.img.android.pesdk.ui.overlay.INIT(settingsHolder);
-            
-    new ly.img.android.pesdk.ui.video_main.INIT(settingsHolder);
+    new ly.img.android.pesdk.assets.font.shared.INIT(settingsHolder);
             
     new ly.img.android.pesdk.assets.overlay.basic.INIT(settingsHolder);
             
-    new ly.img.android.pesdk.ui.text.INIT(settingsHolder);
+    new ly.img.android.pesdk.backend.overlay.INIT(settingsHolder);
+            
+    new ly.img.android.pesdk.assets.font.basic.INIT(settingsHolder);
+            
+    new ly.img.android.pesdk.ui.video_composition.INIT(settingsHolder);
+            
+    new ly.img.android.pesdk.backend.sticker_smart.INIT(settingsHolder);
+            
+    new ly.img.android.pesdk.ui.filter.INIT(settingsHolder);
+            
+    new ly.img.android.pesdk.ui.all.INIT(settingsHolder);
             
     new ly.img.android.pesdk.ui.audio_composition.INIT(settingsHolder);
             
-    new ly.img.android.pesdk.ui.brush.INIT(settingsHolder);
-            
-    new ly.img.android.pesdk.assets.font.smart_sticker.INIT(settingsHolder);
-            
-    new ly.img.android.pesdk.ui.focus.INIT(settingsHolder);
+    new ly.img.android.pesdk.assets.sticker.shapes.INIT(settingsHolder);
             
     new ly.img.android.pesdk.ui.adjustment.INIT(settingsHolder);
             
-    new ly.img.android.pesdk.assets.sticker.emoticons.INIT(settingsHolder);
+    new ly.img.android.pesdk.ui.sticker.INIT(settingsHolder);
+            
+    new ly.img.android.pesdk.ui.focus.INIT(settingsHolder);
+            
+    new ly.img.android.pesdk.ui.frame.INIT(settingsHolder);
+            
+    new ly.img.android.pesdk.ui.text.INIT(settingsHolder);
+            
+    new ly.img.android.pesdk.ui.video_library.INIT(settingsHolder);
+            
+    new ly.img.android.pesdk.ui.INIT(settingsHolder);
+            
+    new ly.img.android.pesdk.ui.overlay.INIT(settingsHolder);
+            
+    new ly.img.android.pesdk.assets.filter.basic.INIT(settingsHolder);
             
     new ly.img.android.pesdk.ui.video_trim.INIT(settingsHolder);
             
-    new ly.img.android.pesdk.assets.font.shared.INIT(settingsHolder);
+    new ly.img.android.pesdk.ui.video_main.INIT(settingsHolder);
+            
+    new ly.img.android.pesdk.ui.transform.INIT(settingsHolder);
+            
+    new ly.img.android.pesdk.assets.font.smart_sticker.INIT(settingsHolder);
+            
+    new ly.img.android.pesdk.backend.frame.INIT(settingsHolder);
+            
+    new ly.img.android.pesdk.backend.text_design.INIT(settingsHolder);
+            
+    new ly.img.android.pesdk.ui.photo_main.INIT(settingsHolder);
+            
+    new ly.img.android.pesdk.assets.sticker.animated.INIT(settingsHolder);
+            
+    new ly.img.android.pesdk.assets.sticker.emoticons.INIT(settingsHolder);
+            
+    new ly.img.android.pesdk.ui.brush.INIT(settingsHolder);
+            
+    new ly.img.android.pesdk.assets.frame.basic.INIT(settingsHolder);
             
 }
         

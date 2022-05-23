@@ -1,7 +1,4 @@
 import React, {useState, useContext, useMemo, useEffect, useRef} from 'react';
-import {useNavigation} from '@react-navigation/native';
-import {StackNavigationProp} from '@react-navigation/stack';
-import {RootStackParamList} from './RootStackPrams';
 import {
   View,
   Text,
@@ -25,10 +22,7 @@ import {VESDK, VideoEditorModal, Configuration} from 'react-native-videoeditorsd
 
 const {width, height} = Dimensions.get('screen');
 
-type authScreenProp = StackNavigationProp<RootStackParamList, 'Home'>;
-
-function HomeScreen() {
-  const navigation = useNavigation<authScreenProp>();
+const HomeScreen = ({ navigation }: any) => {
   const [email, setEmail] = useState<any>();
   const [password, setPassword] = useState<any>();
   const [loading, setLoading] = useState(false);
@@ -75,8 +69,8 @@ function HomeScreen() {
       );
       if (granted === PermissionsAndroid.RESULTS.GRANTED) {
         console.log("Camera permission given");
-        // recordVideo()
-        openEditPanel();
+        recordVideo()
+        // openEditPanel();
       } else {
         console.log("Camera permission denied");
       }
