@@ -8,7 +8,7 @@ import { Dimensions } from 'react-native';
 
 const win = Dimensions.get('window');
 
-const EditorScreen = ({ navigation }: any) => {
+const AdjustScreen = ({ navigation }: any) => {
   // For single select SegmentedControlTab
   const [selectedIndex, setSelectedIndex] = useState(0);
   // For multi select SegmentedControlTab
@@ -53,10 +53,10 @@ const EditorScreen = ({ navigation }: any) => {
             style={styles.headerIconStyleRight}
             />
             </TouchableOpacity>
-          <Text style={styles.tagTitle}>Editor</Text>
-          <TouchableOpacity>
+          <Text style={styles.tagTitle}>Adjust</Text>
+          {/* <TouchableOpacity>
               <Text style={styles.exportBtn}>Export</Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
     </TouchableHighlight>
 
@@ -75,13 +75,13 @@ const EditorScreen = ({ navigation }: any) => {
     {/* Footer content     */}
         <View style={styles.footer}>
         <TouchableOpacity onPress={() => {
-             navigation.navigate('Adjust');
+             console.log("Adjust Screen");
            }}>
            <Ionicons
             name={'ios-color-filter-outline'}
-            style={styles.headerIconStyleRight}
+            style={styles.selectedIcon}
             />
-            <Text style={{color:'lightgrey'}}>Adjust</Text>
+            <Text style={styles.selectedText}>Adjust</Text>
             </TouchableOpacity>
 
             <TouchableOpacity onPress={() => {
@@ -120,7 +120,7 @@ const EditorScreen = ({ navigation }: any) => {
   );
 };
 
-export default EditorScreen;
+export default AdjustScreen;
 
 const styles = StyleSheet.create({
   container: {
@@ -131,9 +131,9 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   tagTitle:{
-    textAlign:'center',
+    textAlign:'left',
     fontWeight: 'bold',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     fontSize: 23,
   },
   footer:{
@@ -192,8 +192,9 @@ const styles = StyleSheet.create({
   },
   upperlayer: {
     paddingTop: 12,
+    flex:1,
     flexDirection:'row',
-    justifyContent:'space-between'
+    justifyContent:'flex-start'
   },
  headerIconStyle: {
     color: 'black',

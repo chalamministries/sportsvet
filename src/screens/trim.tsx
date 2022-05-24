@@ -8,7 +8,7 @@ import { Dimensions } from 'react-native';
 
 const win = Dimensions.get('window');
 
-const EditorScreen = ({ navigation }: any) => {
+const TrimScreen = ({ navigation }: any) => {
   // For single select SegmentedControlTab
   const [selectedIndex, setSelectedIndex] = useState(0);
   // For multi select SegmentedControlTab
@@ -53,7 +53,7 @@ const EditorScreen = ({ navigation }: any) => {
             style={styles.headerIconStyleRight}
             />
             </TouchableOpacity>
-          <Text style={styles.tagTitle}>Editor</Text>
+          <Text style={styles.tagTitle}>Angle</Text>
           <TouchableOpacity>
               <Text style={styles.exportBtn}>Export</Text>
           </TouchableOpacity>
@@ -70,12 +70,11 @@ const EditorScreen = ({ navigation }: any) => {
     
      </ScrollView>
 
-  
 
     {/* Footer content     */}
         <View style={styles.footer}>
         <TouchableOpacity onPress={() => {
-             navigation.navigate('Adjust');
+             navigation.navigate('Adjust')
            }}>
            <Ionicons
             name={'ios-color-filter-outline'}
@@ -85,13 +84,13 @@ const EditorScreen = ({ navigation }: any) => {
             </TouchableOpacity>
 
             <TouchableOpacity onPress={() => {
-             navigation.navigate('Trim')
+            console.log("Trim Screen");
            }}>
            <Ionicons
             name={'cut'}
-            style={styles.headerIconStyleRight}
+            style={styles.selectedIcon}
             />
-            <Text style={{paddingLeft:5, color:'lightgrey'}}>Trim</Text>
+            <Text style={styles.selectedText}>Trim</Text>
             </TouchableOpacity>
 
             <TouchableOpacity onPress={() => {
@@ -120,7 +119,7 @@ const EditorScreen = ({ navigation }: any) => {
   );
 };
 
-export default EditorScreen;
+export default TrimScreen;
 
 const styles = StyleSheet.create({
   container: {
@@ -214,7 +213,8 @@ const styles = StyleSheet.create({
 
   selectedText:{
     color: '#5b57cf',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    paddingLeft:5,
   }
 
 });

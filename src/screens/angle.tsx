@@ -8,7 +8,7 @@ import { Dimensions } from 'react-native';
 
 const win = Dimensions.get('window');
 
-const EditorScreen = ({ navigation }: any) => {
+const AngleScreen = ({ navigation }: any) => {
   // For single select SegmentedControlTab
   const [selectedIndex, setSelectedIndex] = useState(0);
   // For multi select SegmentedControlTab
@@ -53,7 +53,7 @@ const EditorScreen = ({ navigation }: any) => {
             style={styles.headerIconStyleRight}
             />
             </TouchableOpacity>
-          <Text style={styles.tagTitle}>Editor</Text>
+          <Text style={styles.tagTitle}>Angle</Text>
           <TouchableOpacity>
               <Text style={styles.exportBtn}>Export</Text>
           </TouchableOpacity>
@@ -70,12 +70,11 @@ const EditorScreen = ({ navigation }: any) => {
     
      </ScrollView>
 
-  
 
     {/* Footer content     */}
         <View style={styles.footer}>
         <TouchableOpacity onPress={() => {
-             navigation.navigate('Adjust');
+             navigation.navigate('Adjust')
            }}>
            <Ionicons
             name={'ios-color-filter-outline'}
@@ -95,17 +94,17 @@ const EditorScreen = ({ navigation }: any) => {
             </TouchableOpacity>
 
             <TouchableOpacity onPress={() => {
-             navigation.navigate('Angle')
+              console.log("Angle Screen");
            }}>
            <Ionicons
             name={'ios-timer-outline'}
-            style={styles.headerIconStyleRight}
+            style={styles.selectedIcon}
             />
-            <Text style={{paddingLeft:5, color:'lightgrey'}}>Angle</Text>
+            <Text style={styles.selectedText}>Angle</Text>
             </TouchableOpacity>
 
             <TouchableOpacity onPress={() => {
-             navigation.navigate('Shuttle')
+                navigation.navigate('Shuttle')
            }}>
            <Ionicons
             name={'ios-speedometer-outline'}
@@ -120,7 +119,7 @@ const EditorScreen = ({ navigation }: any) => {
   );
 };
 
-export default EditorScreen;
+export default AngleScreen;
 
 const styles = StyleSheet.create({
   container: {
@@ -214,7 +213,8 @@ const styles = StyleSheet.create({
 
   selectedText:{
     color: '#5b57cf',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    paddingLeft:5,
   }
 
 });

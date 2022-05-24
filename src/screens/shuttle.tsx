@@ -8,7 +8,7 @@ import { Dimensions } from 'react-native';
 
 const win = Dimensions.get('window');
 
-const EditorScreen = ({ navigation }: any) => {
+const ShuttleScreen = ({ navigation }: any) => {
   // For single select SegmentedControlTab
   const [selectedIndex, setSelectedIndex] = useState(0);
   // For multi select SegmentedControlTab
@@ -70,12 +70,11 @@ const EditorScreen = ({ navigation }: any) => {
     
      </ScrollView>
 
-  
 
     {/* Footer content     */}
         <View style={styles.footer}>
         <TouchableOpacity onPress={() => {
-             navigation.navigate('Adjust');
+             navigation.navigate('Adjust')
            }}>
            <Ionicons
             name={'ios-color-filter-outline'}
@@ -85,7 +84,7 @@ const EditorScreen = ({ navigation }: any) => {
             </TouchableOpacity>
 
             <TouchableOpacity onPress={() => {
-             navigation.navigate('Trim')
+            navigation.navigate('Trim')
            }}>
            <Ionicons
             name={'cut'}
@@ -105,13 +104,13 @@ const EditorScreen = ({ navigation }: any) => {
             </TouchableOpacity>
 
             <TouchableOpacity onPress={() => {
-             navigation.navigate('Shuttle')
+             console.log("Shuttle Screen");
            }}>
            <Ionicons
             name={'ios-speedometer-outline'}
-            style={styles.headerIconStyleRight}
+            style={styles.selectedIcon}
             />
-            <Text style={{color:'lightgrey'}}>Shuttle</Text>
+            <Text style={styles.selectedText}>Shuttle</Text>
             </TouchableOpacity>
         </View>
     
@@ -120,7 +119,7 @@ const EditorScreen = ({ navigation }: any) => {
   );
 };
 
-export default EditorScreen;
+export default ShuttleScreen;
 
 const styles = StyleSheet.create({
   container: {
