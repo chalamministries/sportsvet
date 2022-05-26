@@ -14,6 +14,7 @@ MERGED from [:react-native-gesture-handler] /home/kumail/Desktop/Shoubil/filterA
 MERGED from [:react-native-image-picker] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-21:12
 MERGED from [:react-native-safe-area-context] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-svg] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-svg/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-vector-icons] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-video] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-video/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.react:react-native:0.68.2] /root/.gradle/caches/transforms-3/7d9d92dc8ec1ba2e45aff2ecbb549550/transformed/jetified-react-native-0.68.2/AndroidManifest.xml:2:1-11:12
@@ -96,9 +97,9 @@ MERGED from [com.yqritc:android-scalablevideoview:1.0.4] /root/.gradle/caches/tr
 MERGED from [com.facebook.fresco:fbcore:2.6.0] /root/.gradle/caches/transforms-3/53007099516bea6db8367ba9bce19768/transformed/jetified-fbcore-2.6.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.odml:image:1.0.0-beta1] /root/.gradle/caches/transforms-3/bd99713e28843f962b31fa6362e5bf33/transformed/jetified-image-1.0.0-beta1/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /root/.gradle/caches/transforms-3/248c0f564962b01f80874ef1b418707d/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /home/kumail/Desktop/Shoubil/filterApp/android/app/src/debug/AndroidManifest.xml:2:1-17:12
-INJECTED from /home/kumail/Desktop/Shoubil/filterApp/android/app/src/debug/AndroidManifest.xml:2:1-17:12
-INJECTED from /home/kumail/Desktop/Shoubil/filterApp/android/app/src/debug/AndroidManifest.xml:2:1-17:12
+INJECTED from /home/kumail/Desktop/Shoubil/filterApp/android/app/src/debug/AndroidManifest.xml:2:1-18:12
+INJECTED from /home/kumail/Desktop/Shoubil/filterApp/android/app/src/debug/AndroidManifest.xml:2:1-18:12
+INJECTED from /home/kumail/Desktop/Shoubil/filterApp/android/app/src/debug/AndroidManifest.xml:2:1-18:12
 	package
 		ADDED from /home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:2:3-33
 		INJECTED from /home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml
@@ -260,6 +261,8 @@ MERGED from [:react-native-safe-area-context] /home/kumail/Desktop/Shoubil/filte
 MERGED from [:react-native-safe-area-context] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-screens] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-screens] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-svg] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-svg/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-svg] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-svg/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-vector-icons] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-vector-icons] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-video] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-video/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
@@ -442,6 +445,12 @@ ADDED from /home/kumail/Desktop/Shoubil/filterApp/android/app/src/debug/AndroidM
 		ADDED from /home/kumail/Desktop/Shoubil/filterApp/android/app/src/debug/AndroidManifest.xml:15:84-108
 	android:name
 		ADDED from /home/kumail/Desktop/Shoubil/filterApp/android/app/src/debug/AndroidManifest.xml:15:19-83
+activity#com.reactlibrary.PortraitCameraActivity
+ADDED from /home/kumail/Desktop/Shoubil/filterApp/android/app/src/debug/AndroidManifest.xml:16:9-107
+	android:theme
+		ADDED from /home/kumail/Desktop/Shoubil/filterApp/android/app/src/debug/AndroidManifest.xml:16:74-105
+	android:name
+		ADDED from /home/kumail/Desktop/Shoubil/filterApp/android/app/src/debug/AndroidManifest.xml:16:19-73
 uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from [com.facebook.flipper:flipper:0.125.0] /root/.gradle/caches/transforms-3/b2ec3232205e095c09543a31d56ae642/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:16:5-76
 	android:name

@@ -70,9 +70,13 @@ const EditorScreen = ({ navigation }: any) => {
         <View style={styles.videoContainer}>
       
           <Video
-          source={{ uri: 'https://rr5---sn-jtcxg-3ipz.googlevideo.com/videoplayback?expire=1653556646&ei=RvGOYvK_IYKykAPX1a2wAg&ip=216.131.106.151&id=o-AJovc8vo2Z5bT_mVlz5wmfH2OivDwnQHnhCt7k-vrqTU&itag=18&source=youtube&requiressl=yes&spc=4ocVC6bXF5ONM1zAoL865uk1cJjz&vprv=1&mime=video%2Fmp4&ns=BU6_UcOTntaryKfgGnmnw8wG&gir=yes&clen=5522817&ratebypass=yes&dur=82.337&lmt=1649663147065710&fexp=24001373,24007246&c=WEB&txp=5538434&n=8sTm1GTs9aJ4XA&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cspc%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRAIgLzEmhjQD4D1gJEUCCIb-fci60XvJ3ydavX1wJYQRF_4CIHyLdoMVMsSVjxeE4XIbzElrv301YE8LNwVyLiB1LecZ&redirect_counter=1&rm=sn-vgqeld76&req_id=f4d7283a4786a3ee&cms_redirect=yes&ipbypass=yes&mh=3R&mip=2400:adc1:407:2300:b37:9272:ee5b:8b1f&mm=31&mn=sn-jtcxg-3ipz&ms=au&mt=1653534782&mv=m&mvi=5&pl=42&lsparams=ipbypass,mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRQIhALx9Dc0B839OIbe5lsFD3nHBcs1GPOYUWdMFsU81te7CAiBIQ9DsTxSo30phAumh_8Kf8JXtSgoXImSGuActT3fbQw%3D%3D' }}
+          source={{ uri: 'https://rr3---sn-3pm7sn7y.googlevideo.com/videoplayback?expire=1653599641&ei=OZmPYoOnJInJsALagZbgCw&ip=39.124.121.154&id=o-AOYr3wYpsB55ybNIXudEQh00uS8S1sTm4XW6-ePbgrwk&itag=18&source=youtube&requiressl=yes&spc=4ocVCzZLBrnCizzSBSWYh45gfm9C&vprv=1&mime=video%2Fmp4&ns=gkXRs0OB3YgF9aoJYSh13zAG&gir=yes&clen=14906352&ratebypass=yes&dur=277.199&lmt=1653536646497275&fexp=24001373,24007246&c=WEB&txp=5538434&n=4NmuDKWpZm0hSw&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cspc%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRAIgM1qlr_o9kcHU5XEvG8UFpVGt8ebVArm6aYJ3JfK6EnUCICeBXS49fUrfJICpFlAT5dfW91nvpLl0A0wFiEmH8c2m&redirect_counter=1&rm=sn-n3cgv5qc5oq-bh2sr7r&req_id=a057e34e93c2a3ee&cms_redirect=yes&cmsv=e&ipbypass=yes&mh=bI&mm=30&mn=sn-3pm7sn7y&ms=nxu&mt=1653580365&mv=m&mvi=3&pl=18&lsparams=ipbypass,mh,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRQIgKHEDxWhX0l0jcFtMOU5aulTBSfCxzowfDzvMhdiWPWMCIQCxRrj47WRhrPpIpv9qCP0lCdZkhh__BYWEapkm_MXyjA%3D%3D' }}
           // source={earthVideo}
-          style={styles.videoPlayer}
+          // style={styles.videoPlayer}
+          style={{
+            aspectRatio: 1,
+            width: "150%"
+          }}
           controls={false}
           audioOnly={true}
           playWhenInactive={true}
@@ -156,8 +160,8 @@ const styles = StyleSheet.create({
     paddingEnd: 10,
     paddingStart: 10,
     justifyContent:'space-between',
-    // marginTop:340,
-    marginTop:140,
+    marginTop:180,
+    // marginTop:140,
     
   },
   imageView:{
@@ -234,6 +238,7 @@ const styles = StyleSheet.create({
     flexDirection:'row',
     justifyContent: 'center',
     marginTop:45,
+    marginLeft:87
   },
 
   videoPlayer:{

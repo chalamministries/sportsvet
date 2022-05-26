@@ -39,6 +39,9 @@
             android:name="com.facebook.react.devsupport.DevSettingsActivity"
             android:exported="false" />
         <activity
+            android:name="com.reactlibrary.PortraitCameraActivity"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name="com.awesometsproject.MainActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
             android:exported="true"
