@@ -3,17 +3,6 @@ import org.apache.tools.ant.taskdefs.condition.Os
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    repositories {
-        mavenCentral()
-        maven { url "https://artifactory.img.ly/artifactory/imgly" }
-    }
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.32"
-        classpath 'ly.img.android.sdk:plugin:10.0.1'
-    }
-}
-
-buildscript {
     ext {
         buildToolsVersion = "31.0.0"
         minSdkVersion = 21
@@ -43,6 +32,11 @@ buildscript {
 
 allprojects {
     repositories {
+        jcenter() {
+            content {
+                includeModule("com.yqritc", "android-scalablevideoview")
+            }
+        }
         maven {
             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
             url("$rootDir/../node_modules/react-native/android")
@@ -63,9 +57,3 @@ allprojects {
     }
 }
 
-
-allprojects {
-    repositories {
-        maven { url 'https://artifactory.img.ly/artifactory/imgly' }
-    }
-}

@@ -19,8 +19,6 @@ import org.reactnative.camera.RNCameraPackage;
 import com.swmansion.gesturehandler.RNGestureHandlerPackage;
 // react-native-image-picker
 import com.imagepicker.ImagePickerPackage;
-// react-native-photoeditorsdk
-import ly.img.react_native.pesdk.RNPhotoEditorSDKPackage;
 // react-native-reanimated
 import com.swmansion.reanimated.ReanimatedPackage;
 // react-native-safe-area-context
@@ -29,8 +27,8 @@ import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
 import com.swmansion.rnscreens.RNScreensPackage;
 // react-native-vector-icons
 import com.oblador.vectoricons.VectorIconsPackage;
-// react-native-videoeditorsdk
-import ly.img.react_native.vesdk.RNVideoEditorSDKPackage;
+// react-native-video
+import com.brentvatne.react.ReactVideoPackage;
 
 public class PackageList {
   private Application application;
@@ -80,12 +78,11 @@ public class PackageList {
       new RNCameraPackage(),
       new RNGestureHandlerPackage(),
       new ImagePickerPackage(),
-      new RNPhotoEditorSDKPackage(),
       new ReanimatedPackage(),
       new SafeAreaContextPackage(),
       new RNScreensPackage(),
       new VectorIconsPackage(),
-      new RNVideoEditorSDKPackage()
+      new ReactVideoPackage()
     ));
   }
 }

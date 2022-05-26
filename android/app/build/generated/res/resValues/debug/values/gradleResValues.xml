@@ -4,10 +4,6 @@
     <!-- Automatically generated file. DO NOT MODIFY -->
 
     <!-- Value from build type: debug -->
-    <string name="PACKAGE__com.awesometsproject" translatable="false"></string>
-    <!-- Value from build type: debug -->
-    <string name="imgly_pesdk_module_package" translatable="false">com.awesometsproject</string>
-    <!-- Value from build type: debug -->
     <integer name="react_native_dev_server_port">8081</integer>
     <!-- Value from build type: debug -->
     <integer name="react_native_inspector_proxy_port">8081</integer>

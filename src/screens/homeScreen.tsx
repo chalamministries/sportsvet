@@ -17,7 +17,6 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Icons from 'react-native-vector-icons/MaterialIcons';
 import {PermissionsAndroid} from 'react-native';
 import * as ImagePicker from 'react-native-image-picker';
-import {VESDK, VideoEditorModal, Configuration} from 'react-native-videoeditorsdk';
 
 
 const {width, height} = Dimensions.get('screen');
@@ -70,7 +69,6 @@ const HomeScreen = ({ navigation }: any) => {
       if (granted === PermissionsAndroid.RESULTS.GRANTED) {
         console.log("Camera permission given");
         recordVideo()
-        // openEditPanel();
       } else {
         console.log("Camera permission denied");
       }
@@ -79,14 +77,6 @@ const HomeScreen = ({ navigation }: any) => {
     }
   };
 
-  const openEditPanel = () => {
-    try {
-      console.log("openEditPanel =>");
-      VESDK.openEditor(require("../assets/video/video1.mp4"));
-    } catch (error) {
-      
-    }
-  }
 
   const recordVideo = () => {
     let options:any = {

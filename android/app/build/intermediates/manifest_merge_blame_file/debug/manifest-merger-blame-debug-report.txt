@@ -27,8 +27,8 @@
 16-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:4:5-67
 16-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:4:22-64
 17    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-17-->[com.facebook.flipper:flipper:0.125.0] /root/.gradle/caches/transforms-3/58126e6e4811bf8a1c7e24c0fda19131/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:16:5-76
-17-->[com.facebook.flipper:flipper:0.125.0] /root/.gradle/caches/transforms-3/58126e6e4811bf8a1c7e24c0fda19131/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:16:22-73
+17-->[com.facebook.flipper:flipper:0.125.0] /root/.gradle/caches/transforms-3/b2ec3232205e095c09543a31d56ae642/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:16:5-76
+17-->[com.facebook.flipper:flipper:0.125.0] /root/.gradle/caches/transforms-3/b2ec3232205e095c09543a31d56ae642/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:16:22-73
 18
 19    <uses-feature
 19-->[:react-native-camera] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-camera/android/build/intermediates/merged_manifest/generalDebug/AndroidManifest.xml:11:5-13:36
@@ -40,270 +40,178 @@
 22-->[:react-native-camera] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-camera/android/build/intermediates/merged_manifest/generalDebug/AndroidManifest.xml:14:5-16:36
 23        android:name="android.hardware.camera.autofocus"
 23-->[:react-native-camera] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-camera/android/build/intermediates/merged_manifest/generalDebug/AndroidManifest.xml:15:9-57
-24        android:required="false" />
+24        android:required="false" /> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
 24-->[:react-native-camera] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-camera/android/build/intermediates/merged_manifest/generalDebug/AndroidManifest.xml:16:9-33
-25    <uses-feature
-25-->[ly.img.android.sdk.ui.mobile_ui:photo-main:10.0.1] /root/.gradle/caches/transforms-3/dd877da716c126f7e3322b356bfb265f/transformed/jetified-photo-main-10.0.1/AndroidManifest.xml:25:5-27:35
-26        android:glEsVersion="0x00020000"
-26-->[ly.img.android.sdk.ui.mobile_ui:photo-main:10.0.1] /root/.gradle/caches/transforms-3/dd877da716c126f7e3322b356bfb265f/transformed/jetified-photo-main-10.0.1/AndroidManifest.xml:26:9-41
-27        android:required="true" /> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
-27-->[ly.img.android.sdk.ui.mobile_ui:photo-main:10.0.1] /root/.gradle/caches/transforms-3/dd877da716c126f7e3322b356bfb265f/transformed/jetified-photo-main-10.0.1/AndroidManifest.xml:27:9-32
-28    <!-- <uses-sdk android:minSdkVersion="14"/> -->
-29    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-29-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /root/.gradle/caches/transforms-3/3351898c3bbcfdd1a601a7a39354a48b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:5-79
-29-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /root/.gradle/caches/transforms-3/3351898c3bbcfdd1a601a7a39354a48b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:22-76
-30
-31    <application
-31-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:10:5-29:19
-32        android:name="com.awesometsproject.MainApplication"
-32-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:11:7-38
-33        android:allowBackup="false"
-33-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:15:7-34
-34        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-34-->[androidx.core:core:1.7.0] /root/.gradle/caches/transforms-3/1423aa7fc83a238dac28ae1c32d478c5/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
-35        android:debuggable="true"
-36        android:icon="@mipmap/ic_launcher"
-36-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:13:7-41
-37        android:label="@string/app_name"
-37-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:12:7-39
-38        android:largeHeap="true"
-38-->[ly.img.android.sdk.assets:sticker-shapes:10.0.1] /root/.gradle/caches/transforms-3/41500a3700bc465ff0752b3c1480c91f/transformed/jetified-sticker-shapes-10.0.1/AndroidManifest.xml:25:18-42
-39        android:roundIcon="@mipmap/ic_launcher_round"
-39-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:14:7-52
-40        android:theme="@style/AppTheme"
-40-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:16:7-38
-41        android:usesCleartextTraffic="true" >
-41-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/debug/AndroidManifest.xml:12:9-44
-42        <activity
-42-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/debug/AndroidManifest.xml:15:9-111
-43            android:name="com.facebook.react.devsupport.DevSettingsActivity"
-43-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/debug/AndroidManifest.xml:15:19-83
-44            android:exported="false" />
-44-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/debug/AndroidManifest.xml:15:84-108
-45        <activity
-45-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:17:7-28:18
-46            android:name="com.awesometsproject.MainActivity"
-46-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:18:9-37
-47            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-47-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:20:9-118
-48            android:exported="true"
-48-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:23:9-32
-49            android:label="@string/app_name"
-49-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:19:9-41
-50            android:launchMode="singleTask"
-50-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:21:9-40
-51            android:windowSoftInputMode="adjustResize" >
-51-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:22:9-51
-52            <intent-filter>
-52-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:24:9-27:25
-53                <action android:name="android.intent.action.MAIN" />
-53-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:25:13-65
-53-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:25:21-62
+25    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+26    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+26-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /root/.gradle/caches/transforms-3/6b88528c5fb1d08f6e5f6609a348ce69/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:5-79
+26-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /root/.gradle/caches/transforms-3/6b88528c5fb1d08f6e5f6609a348ce69/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:22-76
+27
+28    <application
+28-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:10:5-29:19
+29        android:name="com.awesometsproject.MainApplication"
+29-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:11:7-38
+30        android:allowBackup="false"
+30-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:15:7-34
+31        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+31-->[androidx.core:core:1.6.0] /root/.gradle/caches/transforms-3/5c61d7afbc1bcd99cb491da6ba2ee6c1/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
+32        android:debuggable="true"
+33        android:icon="@mipmap/ic_launcher"
+33-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:13:7-41
+34        android:label="@string/app_name"
+34-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:12:7-39
+35        android:roundIcon="@mipmap/ic_launcher_round"
+35-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:14:7-52
+36        android:theme="@style/AppTheme"
+36-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:16:7-38
+37        android:usesCleartextTraffic="true" >
+37-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/debug/AndroidManifest.xml:12:9-44
+38        <activity
+38-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/debug/AndroidManifest.xml:15:9-111
+39            android:name="com.facebook.react.devsupport.DevSettingsActivity"
+39-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/debug/AndroidManifest.xml:15:19-83
+40            android:exported="false" />
+40-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/debug/AndroidManifest.xml:15:84-108
+41        <activity
+41-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:17:7-28:18
+42            android:name="com.awesometsproject.MainActivity"
+42-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:18:9-37
+43            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+43-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:20:9-118
+44            android:exported="true"
+44-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:23:9-32
+45            android:label="@string/app_name"
+45-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:19:9-41
+46            android:launchMode="singleTask"
+46-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:21:9-40
+47            android:windowSoftInputMode="adjustResize" >
+47-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:22:9-51
+48            <intent-filter>
+48-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:24:9-27:25
+49                <action android:name="android.intent.action.MAIN" />
+49-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:25:13-65
+49-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:25:21-62
+50
+51                <category android:name="android.intent.category.LAUNCHER" />
+51-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:26:13-73
+51-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:26:23-70
+52            </intent-filter>
+53        </activity>
 54
-55                <category android:name="android.intent.category.LAUNCHER" />
-55-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:26:13-73
-55-->/home/kumail/Desktop/Shoubil/filterApp/android/app/src/main/AndroidManifest.xml:26:23-70
-56            </intent-filter>
-57        </activity>
-58
-59        <provider
-59-->[:react-native-image-picker] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
-60            android:name="com.imagepicker.ImagePickerProvider"
-60-->[:react-native-image-picker] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-63
-61            android:authorities="com.awesometsproject.imagepickerprovider"
-61-->[:react-native-image-picker] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-71
-62            android:exported="false"
-62-->[:react-native-image-picker] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
-63            android:grantUriPermissions="true" >
-63-->[:react-native-image-picker] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
-64            <meta-data
-64-->[:react-native-image-picker] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:70
-65                android:name="android.support.FILE_PROVIDER_PATHS"
-65-->[:react-native-image-picker] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
-66                android:resource="@xml/imagepicker_provider_paths" />
-66-->[:react-native-image-picker] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-67
-67        </provider>
-68        <provider
-68-->[:react-native-photoeditorsdk] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-photoeditorsdk/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:9-16:47
-69            android:name="ly.img.android.IMGLYAutoInit"
-69-->[:react-native-photoeditorsdk] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-photoeditorsdk/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-56
-70            android:authorities="com.awesometsproject.IMGLYAutoInit"
-70-->[:react-native-photoeditorsdk] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-photoeditorsdk/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-65
-71            android:enabled="false"
-71-->[:react-native-photoeditorsdk] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-photoeditorsdk/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-36
-72            android:exported="false" />
-72-->[:react-native-photoeditorsdk] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-photoeditorsdk/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-37
-73
-74        <activity
-74-->[ly.img.android.sdk.ui.mobile_ui:photo-main:10.0.1] /root/.gradle/caches/transforms-3/dd877da716c126f7e3322b356bfb265f/transformed/jetified-photo-main-10.0.1/AndroidManifest.xml:30:9-38:20
-75            android:name="ly.img.android.pesdk.ui.activity.PhotoEditorActivity"
-75-->[ly.img.android.sdk.ui.mobile_ui:photo-main:10.0.1] /root/.gradle/caches/transforms-3/dd877da716c126f7e3322b356bfb265f/transformed/jetified-photo-main-10.0.1/AndroidManifest.xml:31:13-80
-76            android:configChanges="keyboard|keyboardHidden|screenSize|uiMode"
-76-->[ly.img.android.sdk.ui.mobile_ui:photo-main:10.0.1] /root/.gradle/caches/transforms-3/dd877da716c126f7e3322b356bfb265f/transformed/jetified-photo-main-10.0.1/AndroidManifest.xml:32:13-78
-77            android:exported="true"
-77-->[ly.img.android.sdk.ui.mobile_ui:photo-main:10.0.1] /root/.gradle/caches/transforms-3/dd877da716c126f7e3322b356bfb265f/transformed/jetified-photo-main-10.0.1/AndroidManifest.xml:33:13-36
-78            android:hardwareAccelerated="true"
-78-->[ly.img.android.sdk.ui.mobile_ui:photo-main:10.0.1] /root/.gradle/caches/transforms-3/dd877da716c126f7e3322b356bfb265f/transformed/jetified-photo-main-10.0.1/AndroidManifest.xml:34:13-47
-79            android:label="@string/app_name"
-79-->[ly.img.android.sdk.ui.mobile_ui:photo-main:10.0.1] /root/.gradle/caches/transforms-3/dd877da716c126f7e3322b356bfb265f/transformed/jetified-photo-main-10.0.1/AndroidManifest.xml:35:13-45
-80            android:screenOrientation="portrait"
-80-->[ly.img.android.sdk.ui.mobile_ui:photo-main:10.0.1] /root/.gradle/caches/transforms-3/dd877da716c126f7e3322b356bfb265f/transformed/jetified-photo-main-10.0.1/AndroidManifest.xml:36:13-49
-81            android:windowSoftInputMode="adjustPan" >
-81-->[ly.img.android.sdk.ui.mobile_ui:photo-main:10.0.1] /root/.gradle/caches/transforms-3/dd877da716c126f7e3322b356bfb265f/transformed/jetified-photo-main-10.0.1/AndroidManifest.xml:37:13-52
-82        </activity>
-83        <activity
-83-->[ly.img.android.sdk.ui.mobile_ui:all:10.0.1] /root/.gradle/caches/transforms-3/1d8fe9414580c62e7034e161c8599873/transformed/jetified-all-10.0.1/AndroidManifest.xml:35:9-43:20
-84            android:name="ly.img.android.pesdk.ui.activity.EditorActivity"
-84-->[ly.img.android.sdk.ui.mobile_ui:all:10.0.1] /root/.gradle/caches/transforms-3/1d8fe9414580c62e7034e161c8599873/transformed/jetified-all-10.0.1/AndroidManifest.xml:36:13-75
-85            android:configChanges="keyboard|keyboardHidden|screenSize|uiMode"
-85-->[ly.img.android.sdk.ui.mobile_ui:all:10.0.1] /root/.gradle/caches/transforms-3/1d8fe9414580c62e7034e161c8599873/transformed/jetified-all-10.0.1/AndroidManifest.xml:37:13-78
-86            android:exported="true"
-86-->[ly.img.android.sdk.ui.mobile_ui:all:10.0.1] /root/.gradle/caches/transforms-3/1d8fe9414580c62e7034e161c8599873/transformed/jetified-all-10.0.1/AndroidManifest.xml:38:13-36
-87            android:hardwareAccelerated="true"
-87-->[ly.img.android.sdk.ui.mobile_ui:all:10.0.1] /root/.gradle/caches/transforms-3/1d8fe9414580c62e7034e161c8599873/transformed/jetified-all-10.0.1/AndroidManifest.xml:39:13-47
-88            android:label="@string/app_name"
-88-->[ly.img.android.sdk.ui.mobile_ui:all:10.0.1] /root/.gradle/caches/transforms-3/1d8fe9414580c62e7034e161c8599873/transformed/jetified-all-10.0.1/AndroidManifest.xml:40:13-45
-89            android:screenOrientation="portrait"
-89-->[ly.img.android.sdk.ui.mobile_ui:all:10.0.1] /root/.gradle/caches/transforms-3/1d8fe9414580c62e7034e161c8599873/transformed/jetified-all-10.0.1/AndroidManifest.xml:41:13-49
-90            android:windowSoftInputMode="adjustPan" >
-90-->[ly.img.android.sdk.ui.mobile_ui:all:10.0.1] /root/.gradle/caches/transforms-3/1d8fe9414580c62e7034e161c8599873/transformed/jetified-all-10.0.1/AndroidManifest.xml:42:13-52
-91        </activity>
-92        <activity
-92-->[ly.img.android.sdk.ui.mobile_ui:video-main:10.0.1] /root/.gradle/caches/transforms-3/4f45e09a2eae4619022446653a96e228/transformed/jetified-video-main-10.0.1/AndroidManifest.xml:30:9-38:20
-93            android:name="ly.img.android.pesdk.ui.activity.VideoEditorActivity"
-93-->[ly.img.android.sdk.ui.mobile_ui:video-main:10.0.1] /root/.gradle/caches/transforms-3/4f45e09a2eae4619022446653a96e228/transformed/jetified-video-main-10.0.1/AndroidManifest.xml:31:13-80
-94            android:configChanges="keyboard|keyboardHidden|screenSize|uiMode"
-94-->[ly.img.android.sdk.ui.mobile_ui:video-main:10.0.1] /root/.gradle/caches/transforms-3/4f45e09a2eae4619022446653a96e228/transformed/jetified-video-main-10.0.1/AndroidManifest.xml:32:13-78
-95            android:exported="true"
-95-->[ly.img.android.sdk.ui.mobile_ui:video-main:10.0.1] /root/.gradle/caches/transforms-3/4f45e09a2eae4619022446653a96e228/transformed/jetified-video-main-10.0.1/AndroidManifest.xml:33:13-36
-96            android:hardwareAccelerated="true"
-96-->[ly.img.android.sdk.ui.mobile_ui:video-main:10.0.1] /root/.gradle/caches/transforms-3/4f45e09a2eae4619022446653a96e228/transformed/jetified-video-main-10.0.1/AndroidManifest.xml:34:13-47
-97            android:label="@string/app_name"
-97-->[ly.img.android.sdk.ui.mobile_ui:video-main:10.0.1] /root/.gradle/caches/transforms-3/4f45e09a2eae4619022446653a96e228/transformed/jetified-video-main-10.0.1/AndroidManifest.xml:35:13-45
-98            android:screenOrientation="portrait"
-98-->[ly.img.android.sdk.ui.mobile_ui:video-main:10.0.1] /root/.gradle/caches/transforms-3/4f45e09a2eae4619022446653a96e228/transformed/jetified-video-main-10.0.1/AndroidManifest.xml:36:13-49
-99            android:windowSoftInputMode="adjustPan" >
-99-->[ly.img.android.sdk.ui.mobile_ui:video-main:10.0.1] /root/.gradle/caches/transforms-3/4f45e09a2eae4619022446653a96e228/transformed/jetified-video-main-10.0.1/AndroidManifest.xml:37:13-52
-100        </activity>
-101
-102        <service
-102-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /root/.gradle/caches/transforms-3/ac0823c14937d0ad4c5b5ba0c1ce36a9/transformed/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:9:9-15:19
-103            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
-103-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /root/.gradle/caches/transforms-3/ac0823c14937d0ad4c5b5ba0c1ce36a9/transformed/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:10:13-91
-104            android:directBootAware="true"
-104-->[com.google.mlkit:common:17.2.0] /root/.gradle/caches/transforms-3/5aa17f0fa10d6dd8d6de182a9497908b/transformed/jetified-common-17.2.0/AndroidManifest.xml:17:13-43
-105            android:exported="false" >
-105-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /root/.gradle/caches/transforms-3/ac0823c14937d0ad4c5b5ba0c1ce36a9/transformed/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:11:13-37
-106            <meta-data
-106-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /root/.gradle/caches/transforms-3/ac0823c14937d0ad4c5b5ba0c1ce36a9/transformed/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:12:13-14:85
-107                android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar"
-107-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /root/.gradle/caches/transforms-3/ac0823c14937d0ad4c5b5ba0c1ce36a9/transformed/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:13:17-120
-108                android:value="com.google.firebase.components.ComponentRegistrar" />
-108-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /root/.gradle/caches/transforms-3/ac0823c14937d0ad4c5b5ba0c1ce36a9/transformed/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:14:17-82
-109            <meta-data
-109-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] /root/.gradle/caches/transforms-3/e1a7c2d3cd1211d225d2acb4f6c602a2/transformed/jetified-play-services-mlkit-face-detection-16.2.0/AndroidManifest.xml:12:13-14:85
-110                android:name="com.google.firebase.components:com.google.mlkit.vision.face.internal.FaceRegistrar"
-110-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] /root/.gradle/caches/transforms-3/e1a7c2d3cd1211d225d2acb4f6c602a2/transformed/jetified-play-services-mlkit-face-detection-16.2.0/AndroidManifest.xml:13:17-114
-111                android:value="com.google.firebase.components.ComponentRegistrar" />
-111-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] /root/.gradle/caches/transforms-3/e1a7c2d3cd1211d225d2acb4f6c602a2/transformed/jetified-play-services-mlkit-face-detection-16.2.0/AndroidManifest.xml:14:17-82
-112            <meta-data
-112-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /root/.gradle/caches/transforms-3/4871222a4bd0db87b7a16fcbc8803904/transformed/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:12:13-14:85
-113                android:name="com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar"
-113-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /root/.gradle/caches/transforms-3/4871222a4bd0db87b7a16fcbc8803904/transformed/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:13:17-114
-114                android:value="com.google.firebase.components.ComponentRegistrar" />
-114-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /root/.gradle/caches/transforms-3/4871222a4bd0db87b7a16fcbc8803904/transformed/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:14:17-82
-115            <meta-data
-115-->[com.google.mlkit:vision-common:16.5.0] /root/.gradle/caches/transforms-3/826af85eb0e7ea27c107dac52a26f216/transformed/jetified-vision-common-16.5.0/AndroidManifest.xml:12:13-14:85
-116                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
-116-->[com.google.mlkit:vision-common:16.5.0] /root/.gradle/caches/transforms-3/826af85eb0e7ea27c107dac52a26f216/transformed/jetified-vision-common-16.5.0/AndroidManifest.xml:13:17-124
-117                android:value="com.google.firebase.components.ComponentRegistrar" />
-117-->[com.google.mlkit:vision-common:16.5.0] /root/.gradle/caches/transforms-3/826af85eb0e7ea27c107dac52a26f216/transformed/jetified-vision-common-16.5.0/AndroidManifest.xml:14:17-82
-118            <meta-data
-118-->[com.google.mlkit:common:17.2.0] /root/.gradle/caches/transforms-3/5aa17f0fa10d6dd8d6de182a9497908b/transformed/jetified-common-17.2.0/AndroidManifest.xml:20:13-22:85
-119                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
-119-->[com.google.mlkit:common:17.2.0] /root/.gradle/caches/transforms-3/5aa17f0fa10d6dd8d6de182a9497908b/transformed/jetified-common-17.2.0/AndroidManifest.xml:21:17-120
-120                android:value="com.google.firebase.components.ComponentRegistrar" />
-120-->[com.google.mlkit:common:17.2.0] /root/.gradle/caches/transforms-3/5aa17f0fa10d6dd8d6de182a9497908b/transformed/jetified-common-17.2.0/AndroidManifest.xml:22:17-82
-121        </service>
-122
-123        <provider
-123-->[com.google.mlkit:common:17.2.0] /root/.gradle/caches/transforms-3/5aa17f0fa10d6dd8d6de182a9497908b/transformed/jetified-common-17.2.0/AndroidManifest.xml:9:9-13:38
-124            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
-124-->[com.google.mlkit:common:17.2.0] /root/.gradle/caches/transforms-3/5aa17f0fa10d6dd8d6de182a9497908b/transformed/jetified-common-17.2.0/AndroidManifest.xml:10:13-78
-125            android:authorities="com.awesometsproject.mlkitinitprovider"
-125-->[com.google.mlkit:common:17.2.0] /root/.gradle/caches/transforms-3/5aa17f0fa10d6dd8d6de182a9497908b/transformed/jetified-common-17.2.0/AndroidManifest.xml:11:13-69
-126            android:exported="false"
-126-->[com.google.mlkit:common:17.2.0] /root/.gradle/caches/transforms-3/5aa17f0fa10d6dd8d6de182a9497908b/transformed/jetified-common-17.2.0/AndroidManifest.xml:12:13-37
-127            android:initOrder="99" />
-127-->[com.google.mlkit:common:17.2.0] /root/.gradle/caches/transforms-3/5aa17f0fa10d6dd8d6de182a9497908b/transformed/jetified-common-17.2.0/AndroidManifest.xml:13:13-35
-128
-129        <activity
-129-->[com.google.android.gms:play-services-base:17.6.0] /root/.gradle/caches/transforms-3/cbd7704ec2dfe318817b38ac6ada4e4e/transformed/jetified-play-services-base-17.6.0/AndroidManifest.xml:23:9-26:75
-130            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-130-->[com.google.android.gms:play-services-base:17.6.0] /root/.gradle/caches/transforms-3/cbd7704ec2dfe318817b38ac6ada4e4e/transformed/jetified-play-services-base-17.6.0/AndroidManifest.xml:24:13-79
-131            android:exported="false"
-131-->[com.google.android.gms:play-services-base:17.6.0] /root/.gradle/caches/transforms-3/cbd7704ec2dfe318817b38ac6ada4e4e/transformed/jetified-play-services-base-17.6.0/AndroidManifest.xml:25:13-37
-132            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-132-->[com.google.android.gms:play-services-base:17.6.0] /root/.gradle/caches/transforms-3/cbd7704ec2dfe318817b38ac6ada4e4e/transformed/jetified-play-services-base-17.6.0/AndroidManifest.xml:26:13-72
-133
-134        <meta-data
-134-->[com.google.android.gms:play-services-basement:17.6.0] /root/.gradle/caches/transforms-3/24d342e56bb2abaea20103c88337b15e/transformed/jetified-play-services-basement-17.6.0/AndroidManifest.xml:23:9-25:69
-135            android:name="com.google.android.gms.version"
-135-->[com.google.android.gms:play-services-basement:17.6.0] /root/.gradle/caches/transforms-3/24d342e56bb2abaea20103c88337b15e/transformed/jetified-play-services-basement-17.6.0/AndroidManifest.xml:24:13-58
-136            android:value="@integer/google_play_services_version" />
-136-->[com.google.android.gms:play-services-basement:17.6.0] /root/.gradle/caches/transforms-3/24d342e56bb2abaea20103c88337b15e/transformed/jetified-play-services-basement-17.6.0/AndroidManifest.xml:25:13-66
-137
-138        <provider
-138-->[androidx.emoji2:emoji2:1.0.0] /root/.gradle/caches/transforms-3/68dd961566738b9784e4adc15294fc94/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
-139            android:name="androidx.startup.InitializationProvider"
-139-->[androidx.emoji2:emoji2:1.0.0] /root/.gradle/caches/transforms-3/68dd961566738b9784e4adc15294fc94/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
-140            android:authorities="com.awesometsproject.androidx-startup"
-140-->[androidx.emoji2:emoji2:1.0.0] /root/.gradle/caches/transforms-3/68dd961566738b9784e4adc15294fc94/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
-141            android:exported="false" >
-141-->[androidx.emoji2:emoji2:1.0.0] /root/.gradle/caches/transforms-3/68dd961566738b9784e4adc15294fc94/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
-142            <meta-data
-142-->[androidx.emoji2:emoji2:1.0.0] /root/.gradle/caches/transforms-3/68dd961566738b9784e4adc15294fc94/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
-143                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-143-->[androidx.emoji2:emoji2:1.0.0] /root/.gradle/caches/transforms-3/68dd961566738b9784e4adc15294fc94/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
-144                android:value="androidx.startup" />
-144-->[androidx.emoji2:emoji2:1.0.0] /root/.gradle/caches/transforms-3/68dd961566738b9784e4adc15294fc94/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
-145            <meta-data
-145-->[androidx.lifecycle:lifecycle-process:2.4.0] /root/.gradle/caches/transforms-3/ecbaeef9087e1803dc1b7be393060c2e/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
-146                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-146-->[androidx.lifecycle:lifecycle-process:2.4.0] /root/.gradle/caches/transforms-3/ecbaeef9087e1803dc1b7be393060c2e/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
-147                android:value="androidx.startup" />
-147-->[androidx.lifecycle:lifecycle-process:2.4.0] /root/.gradle/caches/transforms-3/ecbaeef9087e1803dc1b7be393060c2e/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
-148        </provider>
-149
-150        <service
-150-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /root/.gradle/caches/transforms-3/3351898c3bbcfdd1a601a7a39354a48b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:29:9-35:19
-151            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-151-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /root/.gradle/caches/transforms-3/3351898c3bbcfdd1a601a7a39354a48b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:30:13-103
-152            android:exported="false" >
-152-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /root/.gradle/caches/transforms-3/3351898c3bbcfdd1a601a7a39354a48b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:31:13-37
-153            <meta-data
-153-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /root/.gradle/caches/transforms-3/3351898c3bbcfdd1a601a7a39354a48b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:32:13-34:39
-154                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-154-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /root/.gradle/caches/transforms-3/3351898c3bbcfdd1a601a7a39354a48b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:33:17-94
-155                android:value="cct" />
-155-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /root/.gradle/caches/transforms-3/3351898c3bbcfdd1a601a7a39354a48b/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:34:17-36
-156        </service>
-157        <service
-157-->[com.google.android.datatransport:transport-runtime:2.2.6] /root/.gradle/caches/transforms-3/f087ed7cfac732c21f4df547013987dd/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:26:9-30:19
-158            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-158-->[com.google.android.datatransport:transport-runtime:2.2.6] /root/.gradle/caches/transforms-3/f087ed7cfac732c21f4df547013987dd/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:27:13-117
-159            android:exported="false"
-159-->[com.google.android.datatransport:transport-runtime:2.2.6] /root/.gradle/caches/transforms-3/f087ed7cfac732c21f4df547013987dd/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:28:13-37
-160            android:permission="android.permission.BIND_JOB_SERVICE" >
-160-->[com.google.android.datatransport:transport-runtime:2.2.6] /root/.gradle/caches/transforms-3/f087ed7cfac732c21f4df547013987dd/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:29:13-69
-161        </service>
-162
-163        <receiver
-163-->[com.google.android.datatransport:transport-runtime:2.2.6] /root/.gradle/caches/transforms-3/f087ed7cfac732c21f4df547013987dd/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:32:9-34:40
-164            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-164-->[com.google.android.datatransport:transport-runtime:2.2.6] /root/.gradle/caches/transforms-3/f087ed7cfac732c21f4df547013987dd/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:33:13-132
-165            android:exported="false" />
-165-->[com.google.android.datatransport:transport-runtime:2.2.6] /root/.gradle/caches/transforms-3/f087ed7cfac732c21f4df547013987dd/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:34:13-37
-166    </application>
-167
-168</manifest>
+55        <provider
+55-->[:react-native-image-picker] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+56            android:name="com.imagepicker.ImagePickerProvider"
+56-->[:react-native-image-picker] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-63
+57            android:authorities="com.awesometsproject.imagepickerprovider"
+57-->[:react-native-image-picker] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-71
+58            android:exported="false"
+58-->[:react-native-image-picker] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+59            android:grantUriPermissions="true" >
+59-->[:react-native-image-picker] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+60            <meta-data
+60-->[:react-native-image-picker] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:70
+61                android:name="android.support.FILE_PROVIDER_PATHS"
+61-->[:react-native-image-picker] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
+62                android:resource="@xml/imagepicker_provider_paths" />
+62-->[:react-native-image-picker] /home/kumail/Desktop/Shoubil/filterApp/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-67
+63        </provider>
+64
+65        <service
+65-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /root/.gradle/caches/transforms-3/6f70850230effb17198f66ee8ed8c526/transformed/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:9:9-15:19
+66            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
+66-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /root/.gradle/caches/transforms-3/6f70850230effb17198f66ee8ed8c526/transformed/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:10:13-91
+67            android:directBootAware="true"
+67-->[com.google.mlkit:common:17.2.0] /root/.gradle/caches/transforms-3/cc287b136a4e7f6167fe300a912fed9f/transformed/jetified-common-17.2.0/AndroidManifest.xml:17:13-43
+68            android:exported="false" >
+68-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /root/.gradle/caches/transforms-3/6f70850230effb17198f66ee8ed8c526/transformed/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:11:13-37
+69            <meta-data
+69-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /root/.gradle/caches/transforms-3/6f70850230effb17198f66ee8ed8c526/transformed/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:12:13-14:85
+70                android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar"
+70-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /root/.gradle/caches/transforms-3/6f70850230effb17198f66ee8ed8c526/transformed/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:13:17-120
+71                android:value="com.google.firebase.components.ComponentRegistrar" />
+71-->[com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.0] /root/.gradle/caches/transforms-3/6f70850230effb17198f66ee8ed8c526/transformed/jetified-play-services-mlkit-barcode-scanning-16.2.0/AndroidManifest.xml:14:17-82
+72            <meta-data
+72-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] /root/.gradle/caches/transforms-3/47e76037145e902cdfb0d3613d02306b/transformed/jetified-play-services-mlkit-face-detection-16.2.0/AndroidManifest.xml:12:13-14:85
+73                android:name="com.google.firebase.components:com.google.mlkit.vision.face.internal.FaceRegistrar"
+73-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] /root/.gradle/caches/transforms-3/47e76037145e902cdfb0d3613d02306b/transformed/jetified-play-services-mlkit-face-detection-16.2.0/AndroidManifest.xml:13:17-114
+74                android:value="com.google.firebase.components.ComponentRegistrar" />
+74-->[com.google.android.gms:play-services-mlkit-face-detection:16.2.0] /root/.gradle/caches/transforms-3/47e76037145e902cdfb0d3613d02306b/transformed/jetified-play-services-mlkit-face-detection-16.2.0/AndroidManifest.xml:14:17-82
+75            <meta-data
+75-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /root/.gradle/caches/transforms-3/41a7d6820ef5c759713959e07fe00304/transformed/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:12:13-14:85
+76                android:name="com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar"
+76-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /root/.gradle/caches/transforms-3/41a7d6820ef5c759713959e07fe00304/transformed/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:13:17-114
+77                android:value="com.google.firebase.components.ComponentRegistrar" />
+77-->[com.google.android.gms:play-services-mlkit-text-recognition:16.3.0] /root/.gradle/caches/transforms-3/41a7d6820ef5c759713959e07fe00304/transformed/jetified-play-services-mlkit-text-recognition-16.3.0/AndroidManifest.xml:14:17-82
+78            <meta-data
+78-->[com.google.mlkit:vision-common:16.5.0] /root/.gradle/caches/transforms-3/08a9069a3dfef459774a3baa8187119a/transformed/jetified-vision-common-16.5.0/AndroidManifest.xml:12:13-14:85
+79                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
+79-->[com.google.mlkit:vision-common:16.5.0] /root/.gradle/caches/transforms-3/08a9069a3dfef459774a3baa8187119a/transformed/jetified-vision-common-16.5.0/AndroidManifest.xml:13:17-124
+80                android:value="com.google.firebase.components.ComponentRegistrar" />
+80-->[com.google.mlkit:vision-common:16.5.0] /root/.gradle/caches/transforms-3/08a9069a3dfef459774a3baa8187119a/transformed/jetified-vision-common-16.5.0/AndroidManifest.xml:14:17-82
+81            <meta-data
+81-->[com.google.mlkit:common:17.2.0] /root/.gradle/caches/transforms-3/cc287b136a4e7f6167fe300a912fed9f/transformed/jetified-common-17.2.0/AndroidManifest.xml:20:13-22:85
+82                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
+82-->[com.google.mlkit:common:17.2.0] /root/.gradle/caches/transforms-3/cc287b136a4e7f6167fe300a912fed9f/transformed/jetified-common-17.2.0/AndroidManifest.xml:21:17-120
+83                android:value="com.google.firebase.components.ComponentRegistrar" />
+83-->[com.google.mlkit:common:17.2.0] /root/.gradle/caches/transforms-3/cc287b136a4e7f6167fe300a912fed9f/transformed/jetified-common-17.2.0/AndroidManifest.xml:22:17-82
+84        </service>
+85
+86        <provider
+86-->[com.google.mlkit:common:17.2.0] /root/.gradle/caches/transforms-3/cc287b136a4e7f6167fe300a912fed9f/transformed/jetified-common-17.2.0/AndroidManifest.xml:9:9-13:38
+87            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
+87-->[com.google.mlkit:common:17.2.0] /root/.gradle/caches/transforms-3/cc287b136a4e7f6167fe300a912fed9f/transformed/jetified-common-17.2.0/AndroidManifest.xml:10:13-78
+88            android:authorities="com.awesometsproject.mlkitinitprovider"
+88-->[com.google.mlkit:common:17.2.0] /root/.gradle/caches/transforms-3/cc287b136a4e7f6167fe300a912fed9f/transformed/jetified-common-17.2.0/AndroidManifest.xml:11:13-69
+89            android:exported="false"
+89-->[com.google.mlkit:common:17.2.0] /root/.gradle/caches/transforms-3/cc287b136a4e7f6167fe300a912fed9f/transformed/jetified-common-17.2.0/AndroidManifest.xml:12:13-37
+90            android:initOrder="99" />
+90-->[com.google.mlkit:common:17.2.0] /root/.gradle/caches/transforms-3/cc287b136a4e7f6167fe300a912fed9f/transformed/jetified-common-17.2.0/AndroidManifest.xml:13:13-35
+91
+92        <service
+92-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /root/.gradle/caches/transforms-3/6b88528c5fb1d08f6e5f6609a348ce69/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:29:9-35:19
+93            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+93-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /root/.gradle/caches/transforms-3/6b88528c5fb1d08f6e5f6609a348ce69/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:30:13-103
+94            android:exported="false" >
+94-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /root/.gradle/caches/transforms-3/6b88528c5fb1d08f6e5f6609a348ce69/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:31:13-37
+95            <meta-data
+95-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /root/.gradle/caches/transforms-3/6b88528c5fb1d08f6e5f6609a348ce69/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:32:13-34:39
+96                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+96-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /root/.gradle/caches/transforms-3/6b88528c5fb1d08f6e5f6609a348ce69/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:33:17-94
+97                android:value="cct" />
+97-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /root/.gradle/caches/transforms-3/6b88528c5fb1d08f6e5f6609a348ce69/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:34:17-36
+98        </service>
+99        <service
+99-->[com.google.android.datatransport:transport-runtime:2.2.6] /root/.gradle/caches/transforms-3/624f3d023b58639df151d675906f9d26/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:26:9-30:19
+100            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+100-->[com.google.android.datatransport:transport-runtime:2.2.6] /root/.gradle/caches/transforms-3/624f3d023b58639df151d675906f9d26/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:27:13-117
+101            android:exported="false"
+101-->[com.google.android.datatransport:transport-runtime:2.2.6] /root/.gradle/caches/transforms-3/624f3d023b58639df151d675906f9d26/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:28:13-37
+102            android:permission="android.permission.BIND_JOB_SERVICE" >
+102-->[com.google.android.datatransport:transport-runtime:2.2.6] /root/.gradle/caches/transforms-3/624f3d023b58639df151d675906f9d26/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:29:13-69
+103        </service>
+104
+105        <receiver
+105-->[com.google.android.datatransport:transport-runtime:2.2.6] /root/.gradle/caches/transforms-3/624f3d023b58639df151d675906f9d26/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:32:9-34:40
+106            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+106-->[com.google.android.datatransport:transport-runtime:2.2.6] /root/.gradle/caches/transforms-3/624f3d023b58639df151d675906f9d26/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:33:13-132
+107            android:exported="false" />
+107-->[com.google.android.datatransport:transport-runtime:2.2.6] /root/.gradle/caches/transforms-3/624f3d023b58639df151d675906f9d26/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:34:13-37
+108
+109        <activity
+109-->[com.google.android.gms:play-services-base:17.6.0] /root/.gradle/caches/transforms-3/ad7ca3837a0a5e65aa3324e2e1ffd1c2/transformed/jetified-play-services-base-17.6.0/AndroidManifest.xml:23:9-26:75
+110            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+110-->[com.google.android.gms:play-services-base:17.6.0] /root/.gradle/caches/transforms-3/ad7ca3837a0a5e65aa3324e2e1ffd1c2/transformed/jetified-play-services-base-17.6.0/AndroidManifest.xml:24:13-79
+111            android:exported="false"
+111-->[com.google.android.gms:play-services-base:17.6.0] /root/.gradle/caches/transforms-3/ad7ca3837a0a5e65aa3324e2e1ffd1c2/transformed/jetified-play-services-base-17.6.0/AndroidManifest.xml:25:13-37
+112            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+112-->[com.google.android.gms:play-services-base:17.6.0] /root/.gradle/caches/transforms-3/ad7ca3837a0a5e65aa3324e2e1ffd1c2/transformed/jetified-play-services-base-17.6.0/AndroidManifest.xml:26:13-72
+113
+114        <meta-data
+114-->[com.google.android.gms:play-services-basement:17.6.0] /root/.gradle/caches/transforms-3/a0da74c7ae4f5cd232b57315fdbf9487/transformed/jetified-play-services-basement-17.6.0/AndroidManifest.xml:23:9-25:69
+115            android:name="com.google.android.gms.version"
+115-->[com.google.android.gms:play-services-basement:17.6.0] /root/.gradle/caches/transforms-3/a0da74c7ae4f5cd232b57315fdbf9487/transformed/jetified-play-services-basement-17.6.0/AndroidManifest.xml:24:13-58
+116            android:value="@integer/google_play_services_version" />
+116-->[com.google.android.gms:play-services-basement:17.6.0] /root/.gradle/caches/transforms-3/a0da74c7ae4f5cd232b57315fdbf9487/transformed/jetified-play-services-basement-17.6.0/AndroidManifest.xml:25:13-66
+117    </application>
+118
+119</manifest>

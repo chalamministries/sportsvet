@@ -5,19 +5,19 @@ import {TouchableHighlight} from 'react-native-gesture-handler';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { Dimensions } from 'react-native';
 
+import Video from 'react-native-video';
 
 const win = Dimensions.get('window');
 
 const EditorScreen = ({ navigation }: any) => {
-  // For single select SegmentedControlTab
   const [selectedIndex, setSelectedIndex] = useState(0);
-  // For multi select SegmentedControlTab
   const [selectedIndices, setSelectedIndices] = useState([0]);
-  // For custom SegmentedControlTab
   const [customStyleIndex, setCustomStyleIndex] = useState(0);
+  
+  
+  const earthVideo = '../assets/video/video1.mp4';
 
   const handleSingleIndexSelect = (index:any) => {
-    // For single Tab Selection SegmentedControlTab
     setSelectedIndex(index);
   };
 
@@ -60,13 +60,25 @@ const EditorScreen = ({ navigation }: any) => {
         </View>
     </TouchableHighlight>
 
-           <View>
+           {/* <View>
                 <Image
-                style={styles.imageView}
+                style={styles.imageView} 
                 source={require('../assets/background/focusedImage.png')}
                 resizeMode={'contain'}/>
-           </View>
-
+           </View> */}
+        
+        <View style={styles.videoContainer}>
+      
+          <Video
+          source={{ uri: 'https://rr5---sn-jtcxg-3ipz.googlevideo.com/videoplayback?expire=1653556646&ei=RvGOYvK_IYKykAPX1a2wAg&ip=216.131.106.151&id=o-AJovc8vo2Z5bT_mVlz5wmfH2OivDwnQHnhCt7k-vrqTU&itag=18&source=youtube&requiressl=yes&spc=4ocVC6bXF5ONM1zAoL865uk1cJjz&vprv=1&mime=video%2Fmp4&ns=BU6_UcOTntaryKfgGnmnw8wG&gir=yes&clen=5522817&ratebypass=yes&dur=82.337&lmt=1649663147065710&fexp=24001373,24007246&c=WEB&txp=5538434&n=8sTm1GTs9aJ4XA&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cspc%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRAIgLzEmhjQD4D1gJEUCCIb-fci60XvJ3ydavX1wJYQRF_4CIHyLdoMVMsSVjxeE4XIbzElrv301YE8LNwVyLiB1LecZ&redirect_counter=1&rm=sn-vgqeld76&req_id=f4d7283a4786a3ee&cms_redirect=yes&ipbypass=yes&mh=3R&mip=2400:adc1:407:2300:b37:9272:ee5b:8b1f&mm=31&mn=sn-jtcxg-3ipz&ms=au&mt=1653534782&mv=m&mvi=5&pl=42&lsparams=ipbypass,mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRQIhALx9Dc0B839OIbe5lsFD3nHBcs1GPOYUWdMFsU81te7CAiBIQ9DsTxSo30phAumh_8Kf8JXtSgoXImSGuActT3fbQw%3D%3D' }}
+          // source={earthVideo}
+          style={styles.videoPlayer}
+          controls={false}
+          audioOnly={true}
+          playWhenInactive={true}
+          />
+  
+        </View>
     
      </ScrollView>
 
@@ -144,7 +156,8 @@ const styles = StyleSheet.create({
     paddingEnd: 10,
     paddingStart: 10,
     justifyContent:'space-between',
-    marginTop:340,
+    // marginTop:340,
+    marginTop:140,
     
   },
   imageView:{
@@ -215,6 +228,17 @@ const styles = StyleSheet.create({
   selectedText:{
     color: '#5b57cf',
     fontWeight: 'bold'
+  },
+
+  videoContainer:{
+    flexDirection:'row',
+    justifyContent: 'center',
+    marginTop:45,
+  },
+
+  videoPlayer:{
+    width: 300,
+    height: 300
   }
 
 });
