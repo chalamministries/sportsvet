@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:gravity="center"
+	android:id="@+id/layout_out"
+	android:orientation="horizontal"
+	tools:ignore="MissingDefaultResource">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="wrap_content"
+		android:layout_height="@dimen/_50sdp">
+
+		<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/rv_bitmaps"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:nestedScrollingEnabled="false"
+			android:orientation="horizontal"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			tools:listitem="@layout/item_thumb" />
+
+		<com.fini.pro.sportsvet.utils.video.Ranger
+			android:id="@+id/ranger"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			app:layout_constraintEnd_toEndOf="@id/rv_bitmaps"
+			app:layout_constraintStart_toStartOf="@id/rv_bitmaps"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:min="0"
+			app:max="100"
+			app:currentMax="100"
+			app:currentMin="0"
+			app:thumbStartResource="@drawable/edge"
+			app:thumbEndResource="@drawable/edge_right"/>
+
+		<View
+			android:layout_marginTop="10dp"
+			android:id="@+id/bar_audio"
+			android:layout_width="0dp"
+			android:layout_height="10dp"
+			android:background="@color/ve_blue"
+			app:layout_constraintEnd_toEndOf="@id/rv_bitmaps"
+			app:layout_constraintStart_toStartOf="@id/rv_bitmaps"
+			app:layout_constraintTop_toBottomOf="@id/rv_bitmaps"
+			app:layout_constraintBottom_toBottomOf="parent" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+	<ImageView
+		android:id="@+id/imv_splitter"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:contentDescription="@null"
+		android:src="@drawable/split_1"
+		android:visibility="visible" />
+
+</LinearLayout>

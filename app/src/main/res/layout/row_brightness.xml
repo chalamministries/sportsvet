@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	android:id="@+id/ll_content"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="@dimen/_50sdp"
+	android:layout_height="@dimen/_50sdp"
+	android:layout_margin="@dimen/_3sdp"
+	android:orientation="vertical"
+	android:background="@drawable/filter_unselect">
+
+<!--	<com.fini.pro.sportsvet.utils.video.filter.MovieWrapperView-->
+<!--		android:layout_width="@dimen/_70sdp"-->
+<!--		android:layout_height="@dimen/_70sdp"/>-->
+
+	<ImageView
+		android:id="@+id/iv_filter"
+		android:contentDescription="@string/app_name"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:padding="@dimen/_12sdp"
+		android:src="@drawable/filter_brightness"/>
+
+	<TextView
+		android:id="@+id/tv_filter"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:fontFamily="@font/roboto_black"
+		android:textColor="@color/white"
+		android:textSize="@dimen/_9sdp"
+		android:gravity="center"
+		android:text="Filter title"
+		android:visibility="gone"/>
+
+</LinearLayout>

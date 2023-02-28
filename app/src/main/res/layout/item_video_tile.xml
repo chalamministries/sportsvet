@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="@dimen/_100sdp"
+	android:padding="@dimen/_2sdp">
+
+	<ImageView
+		android:id="@+id/iv_thumbnail"
+		android:contentDescription="@string/app_name"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:scaleType="centerCrop"
+		android:background="@drawable/round_outline"
+		android:clipToOutline="true"
+		android:src="@drawable/cat"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/_20sdp"
+		android:layout_alignParentBottom="true"
+		android:layout_margin="@dimen/_3sdp"
+		android:background="@drawable/round_trans">
+		<ImageView
+			android:contentDescription="@string/app_name"
+			android:layout_width="@dimen/_30sdp"
+			android:layout_height="match_parent"
+			android:paddingStart="@dimen/_8sdp"
+			android:paddingEnd="@dimen/_8sdp"
+			android:src="@drawable/icon_camera"/>
+		<TextView
+			android:id="@+id/tv_duration"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginEnd="@dimen/_5sdp"
+			android:gravity="center_vertical|end"
+			android:textColor="@color/white"
+			android:fontFamily="@font/roboto_medium"
+			android:textSize="@dimen/_12sdp"
+			android:text="00:43"/>
+	</LinearLayout>
+
+</RelativeLayout>

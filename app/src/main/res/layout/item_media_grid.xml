@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/video_view"
+    android:layout_margin="1dp"
+    android:background="@color/ve_black"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_85sdp">
+
+    <ImageView
+        android:id="@+id/imv_thumb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:src="@drawable/loading_progress"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_margin="5dp"
+        android:layout_gravity="bottom">
+
+        <ImageView
+            android:id="@+id/imv_media_type"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="2dp"
+            android:src="@drawable/ic_video_camera"
+            app:tint="@color/ve_white"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:id="@+id/txv_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="@color/ve_white"
+            tools:text="12:10"/>
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:visibility="invisible"
+        android:layout_gravity="end"
+        android:layout_margin="10dp"
+        android:id="@+id/imv_checked"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_check"/>
+
+</FrameLayout>

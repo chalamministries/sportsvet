@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	android:id="@+id/rl_content"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_gravity="center"
+	android:background="@color/white">
+
+	<LinearLayout
+		android:id="@+id/ll_content"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<ImageView
+			android:contentDescription="@string/app_name"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/_120sdp"
+			android:layout_margin="@dimen/_30sdp"
+			android:src="@drawable/export_complete"/>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="@color/black"
+			android:fontFamily="@font/poppins_semibold"
+			android:textSize="@dimen/_15sdp"
+			android:gravity="center"
+			android:text="Export Complete"/>
+
+		<TextView
+			android:id="@+id/tv_information"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/_4sdp"
+			android:layout_marginBottom="@dimen/_20sdp"
+			android:layout_marginStart="@dimen/_20sdp"
+			android:layout_marginEnd="@dimen/_20sdp"
+			android:textColor="@color/gray2"
+			android:fontFamily="@font/poppins_semibold"
+			android:textSize="@dimen/_12sdp"
+			android:gravity="center"
+			android:text="Information"/>
+
+		<TextView
+			android:id="@+id/tv_done"
+			android:layout_width="@dimen/_100sdp"
+			android:layout_height="@dimen/_35sdp"
+			android:layout_marginBottom="@dimen/_20sdp"
+			android:layout_gravity="center"
+			android:background="@color/purple1"
+			android:gravity="center"
+			android:textColor="@color/white"
+			android:fontFamily="@font/poppins_semibold"
+			android:textSize="@dimen/_12sdp"
+			android:text="Done"/>
+
+	</LinearLayout>
+
+</RelativeLayout>

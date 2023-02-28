@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Text Overlay"
+            android:fontFamily="@font/roboto_black"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/imv_close"
+            style="@style/Theme.SportsVet.Clickable"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:background="@drawable/ic_gray_circle"
+            android:padding="7dp"
+            android:src="@drawable/ic_close"
+            app:tint="@color/black" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray3" />
+
+    <ProgressBar
+        android:id="@+id/progress_horizontal"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="-5dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/ve_yellow" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginHorizontal="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/imv_frame"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/red"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@null" />
+
+        <EditText
+            android:background="@android:color/transparent"
+            android:id="@+id/edit_text"
+            android:inputType="textMultiLine"
+            android:padding="20dp"
+            android:gravity="center"
+            android:hint="Type here .."
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/imv_frame"
+            app:layout_constraintStart_toStartOf="@id/imv_frame"
+            app:layout_constraintTop_toTopOf="@id/imv_frame"
+            app:layout_constraintBottom_toBottomOf="@id/imv_frame"
+            android:autofillHints="Type here" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/txv_slider"
+        android:layout_marginStart="30dp"
+        android:layout_gravity="start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show text from 5 s to 20 s"
+        android:textColor="@color/white"/>
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/range_slider"
+        android:valueFrom="0.0"
+        android:valueTo="100.0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="10dp"/>
+
+    <LinearLayout
+        android:layout_marginHorizontal="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/Theme.SportsVet.RedButton"
+            android:id="@+id/btnShow"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="confirm"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:src="@drawable/ic_add"
+            android:padding="7dp"
+            app:tint="@color/white"
+            style="@style/Theme.SportsVet.RedButton"
+            android:id="@+id/zoom_in"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/txv_scale"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_black"
+            android:textSize="@dimen/_11sdp"
+            android:text="12"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:padding="7dp"
+            android:src="@drawable/ic_min"
+            app:tint="@color/white"
+            style="@style/Theme.SportsVet.RedButton"
+            android:id="@+id/zoom_out"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

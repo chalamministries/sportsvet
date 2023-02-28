@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".fragment.TrimFragment"
+	android:background="@color/transparent">
+
+	<androidx.core.widget.NestedScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:gravity="center_horizontal">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="@dimen/_20sdp"
+				android:layout_marginEnd="@dimen/_20sdp"
+				android:layout_marginTop="@dimen/_10sdp"
+				android:gravity="center_vertical"
+				android:orientation="horizontal">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:fontFamily="@font/roboto_medium"
+					android:textSize="@dimen/_12sdp"
+					android:text="Start time - "/>
+
+				<TextView
+					android:id="@+id/tv_start_time"
+					android:layout_width="0dp"
+					android:layout_weight="1"
+					android:layout_height="wrap_content"
+					android:fontFamily="@font/roboto_regular"
+					android:textSize="@dimen/_12sdp"
+					android:text="00:00"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="@dimen/_10sdp"
+					android:fontFamily="@font/roboto_medium"
+					android:textSize="@dimen/_12sdp"
+					android:text="End time - "/>
+
+				<TextView
+					android:id="@+id/tv_end_time"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:fontFamily="@font/roboto_regular"
+					android:textSize="@dimen/_12sdp"
+					android:text="00:00"/>
+
+			</LinearLayout>
+
+			<TextView
+				android:id="@+id/tv_apply"
+				android:layout_width="@dimen/_70sdp"
+				android:layout_height="@dimen/_30sdp"
+				android:layout_marginTop="@dimen/_10sdp"
+				android:layout_marginBottom="@dimen/_20sdp"
+				android:background="@color/purple1"
+				android:gravity="center"
+				android:fontFamily="@font/poppins_semibold"
+				android:text="Apply"
+				android:textColor="@color/white"
+				android:textSize="@dimen/_12sdp"/>
+
+		</LinearLayout>
+	</androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

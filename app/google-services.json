@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "392701996859",
+    "project_id": "sportsvet-7771c",
+    "storage_bucket": "sportsvet-7771c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:392701996859:android:92a854928a54e5bdb4111e",
+        "android_client_info": {
+          "package_name": "com.fini.pro.sportsvet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "392701996859-4k36fcecjjjqa26hf6vtvbdbmt1mggh4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCByE1ONqXcLvppHZtVIBFO2bLBbaVYkTM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "392701996859-4k36fcecjjjqa26hf6vtvbdbmt1mggh4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

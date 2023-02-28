@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".activity.GalleryActivity"
+	android:background="@color/white"
+	android:orientation="vertical">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/_35sdp"
+		android:background="@color/white"
+		android:elevation="@dimen/_5sdp">
+
+		<ImageView
+			android:id="@+id/iv_back"
+			android:layout_width="@dimen/_40sdp"
+			android:layout_height="match_parent"
+			android:contentDescription="@string/app_name"
+			android:padding="@dimen/_9sdp"
+			android:src="@drawable/ic_back" />
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_toEndOf="@id/iv_back"
+			android:fontFamily="@font/poppins_semibold"
+			android:text="Select Video"
+			android:textColor="@color/black"
+			android:textSize="@dimen/_15sdp" />
+
+		<ImageView
+			android:id="@+id/iv_record"
+			android:contentDescription="@string/app_name"
+			android:layout_width="@dimen/_40sdp"
+			android:layout_height="match_parent"
+			android:layout_alignParentEnd="true"
+			android:padding="@dimen/_10sdp"
+			android:src="@drawable/ic_record_black"/>
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="1dp"
+			android:layout_alignParentBottom="true"
+			android:background="@color/gray1" />
+	</RelativeLayout>
+
+<!--	<androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+<!--		android:id="@+id/refresh_videos"-->
+<!--		android:layout_width="match_parent"-->
+<!--		android:layout_height="match_parent">-->
+	<ProgressBar
+		android:id="@+id/progress_horizontal"
+		style="?android:attr/progressBarStyleHorizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:indeterminate="true"
+		android:indeterminateTint="@color/purple1" />
+
+		<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/rv_videos"
+			tools:listitem="@layout/item_video_group"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:paddingStart="@dimen/_5sdp"
+			android:paddingEnd="@dimen/_5sdp"/>
+<!--	</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+
+</LinearLayout>

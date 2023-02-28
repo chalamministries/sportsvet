@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/video_view"
+    android:layout_margin="1dp"
+    android:background="@color/ve_black"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <ImageView
+        style="@style/Clickable"
+        android:id="@+id/imv_color"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:background="@color/red" />
+
+</FrameLayout>
