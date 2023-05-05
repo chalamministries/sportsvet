@@ -251,7 +251,7 @@ public enum FilterType {
                 return new GlWeakPixelInclusionFilter();
             case WHITE_BALANCE:
                 GlWhiteBalanceFilter glWhiteBalanceFilter = new GlWhiteBalanceFilter();
-                glWhiteBalanceFilter.setTemperature(2400f);
+                glWhiteBalanceFilter.setTemperature(value.floatValue());
                 glWhiteBalanceFilter.setTint(2f);
                 return glWhiteBalanceFilter;
             case ZOOM_BLUR:

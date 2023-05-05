@@ -1,6 +1,8 @@
 package com.fini.pro.sportsvet.activity
 
 import android.annotation.SuppressLint
+import android.media.MediaPlayer
+import android.media.PlaybackParams
 import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
@@ -13,6 +15,7 @@ import android.view.ViewGroup
 import android.view.ViewTreeObserver
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.PopupMenu
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSmoothScroller
@@ -32,13 +35,15 @@ import com.fini.pro.sportsvet.utils.video.model.Media
 import com.fini.pro.sportsvet.utils.video.presenter.MediaHandler
 import com.fini.pro.sportsvet.utils.video.presenter.MediaHandler.Companion.itemHeight
 import com.fini.pro.sportsvet.utils.video.presenter.MediaHandler.Companion.itemWidth
+import com.fini.pro.sportsvet.utils.video.presenter.OptiConstant
+import com.fini.pro.sportsvet.utils.video.presenter.Speeder
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
 
 
 class EditActivity : AppCompatActivity(),
-    TrimFragment.TrimFragmentListener, BrightnessFragment.BrightnessFragmentListener {
+    TrimFragment.TrimFragmentListener, BrightnessFragment.BrightnessFragmentListener, ShuttleFragment.ShuttleFragmentListener {
 
     companion object {
         private const val TAG_SHUTTLE = "shuttle"
@@ -70,6 +75,7 @@ class EditActivity : AppCompatActivity(),
     private lateinit var tvCurrentTime: TextView
     private lateinit var ivPrevious: ImageView
     private lateinit var ivNext: ImageView
+    private var mediaPlayer: MediaPlayer? = null
 
     private var fragmentList: ArrayList<Fragment> = arrayListOf()
     private var currentFragmentTag = ""
@@ -193,6 +199,7 @@ class EditActivity : AppCompatActivity(),
         videoView = findViewById(R.id.video_view)
 
         ivPlay = findViewById(R.id.iv_play)
+
         llTimeRange = findViewById(R.id.ll_time_range)
         llTimeRange.visibility = View.GONE
 
@@ -211,6 +218,8 @@ class EditActivity : AppCompatActivity(),
             llTimeRange.visibility = View.GONE
             videoTrimmerAdapter.editType = EditType.SHUTTLE
             presentShuttleFragment()
+
+            shuttleFragment.setMedia(sender = currentMedia)
         }
         llAngle = findViewById(R.id.ll_angle)
         llAngle.setOnClickListener {
@@ -278,6 +287,82 @@ class EditActivity : AppCompatActivity(),
         ivNext.background = Utils.getRippleDrawable(getColor(R.color.white), 0)
         ivNext.setOnClickListener {
             onPrevOrNextMedia(prev = false)
+        }
+
+        // Speed
+        val ivSpeed = findViewById<ImageView>(R.id.iv_speed)
+        ivSpeed.setOnClickListener {
+            val popupMenu = PopupMenu(this@EditActivity, ivSpeed)
+            popupMenu.menu.add(OptiConstant.SPEED_0_25)
+            popupMenu.menu.add(OptiConstant.SPEED_0_5)
+            popupMenu.menu.add(OptiConstant.SPEED_0_75)
+            popupMenu.menu.add(OptiConstant.SPEED_1_0)
+            popupMenu.menu.add(OptiConstant.SPEED_1_25)
+            popupMenu.menu.add(OptiConstant.SPEED_1_5)
+
+            popupMenu.show()
+
+            popupMenu.setOnMenuItemClickListener {
+                if (currentMedia == null)
+                    return@setOnMenuItemClickListener false
+
+                var playbackSpeed = 0.0F
+                var tempo = 0.0F
+                when (it.title) {
+
+                    OptiConstant.SPEED_0_25 -> {
+                        playbackSpeed = 1.75F
+                        tempo = 0.50F
+                    }
+
+                    OptiConstant.SPEED_0_5 -> {
+                        playbackSpeed = 1.50F
+                        tempo = 0.50F
+                    }
+
+                    OptiConstant.SPEED_0_75 -> {
+                        playbackSpeed = 1.25F
+                        tempo = 0.75F
+                    }
+
+                    OptiConstant.SPEED_1_0 -> {
+                        playbackSpeed = 1.0F
+                        tempo = 1.0F
+                    }
+
+                    OptiConstant.SPEED_1_25 -> {
+                        playbackSpeed = 0.75F
+                        tempo = 1.25F
+                    }
+
+                    OptiConstant.SPEED_1_5 -> {
+                        playbackSpeed = 0.50F
+                        tempo = 2.0F
+                    }
+
+                }
+
+                val speeder = Speeder(this@EditActivity, object : Speeder.SpeederCallBack {
+                    override fun onVideoSpeed(list: ArrayList<String>) {
+                        Log.e("onVideoSpeed", "${list.count()}")
+                        if (list.isNotEmpty()) {
+                            Handler(Looper.getMainLooper()).postDelayed({
+                                onVideoSetup(list[0])
+                            }, 500)
+                        }
+                    }
+
+                    override fun loading(isLoading: Boolean) {
+                        if (isLoading)
+                            showLoading()
+                        else
+                            hideLoading()
+                    }
+                })
+
+                speeder.speed(currentMedia!!, playbackSpeed.toString(), tempo.toString())
+                return@setOnMenuItemClickListener false
+            }
         }
     }
 
@@ -460,10 +545,7 @@ class EditActivity : AppCompatActivity(),
                                     initVideoView()
                                 }
                                 //recyclerView.scrollToPosition(scrollingPosition + 1)
-                                linearLayoutManager.scrollToPositionWithOffset(
-                                    scrollingPosition + 1,
-                                    0
-                                )
+                                linearLayoutManager.scrollToPositionWithOffset(scrollingPosition + 1, 0)
                                 totalPixels = currentMedia!!.computeStartPixel(mediaList)
 //                                    recyclerView.scrollToPosition(currentMedia?.startPosition!! + extraItems - 1)
                             }
@@ -483,9 +565,6 @@ class EditActivity : AppCompatActivity(),
                         1000
                     )
                 )
-                Log.d("scrolling_move", "position: $scrollingPosition")
-                Log.d("scrolling_move", "media: " + currentMedia?.id!!)
-                Log.d("scrolling_move", "pixels: $totalPixels")
 
                 if (recyclerIsPreparing) {
                     if (dx < 0) {
@@ -545,20 +624,7 @@ class EditActivity : AppCompatActivity(),
                                 (currentMedia?.computeStartPixel(mediaList)!!).toFloat())) *
                                 (currentMedia?.duration!!.toFloat() / currentMedia?.distance!!.toFloat())).toInt()
 
-
                         videoView.seekTo(msec)
-                        Log.d("seek_time", "videoDistance :" + currentMedia?.distance!!)
-                        Log.d(
-                            "seek_time", "startPosition :" + currentMedia?.computeStartPixel(
-                                mediaList
-                            )!!
-                        )
-                        Log.d("seek_time", "offset :$totalPixels")
-                        Log.d("seek_time", "duration :" + currentMedia?.duration)
-                        Log.d("seek_time", "currentPosition :" + videoView.currentPosition)
-                        Log.d("seek_time", currentMedia.toString())
-                        Log.d("seek_time", "******************************************")
-
                     }
                 }
             }
@@ -629,22 +695,24 @@ class EditActivity : AppCompatActivity(),
             }
 
             videoView.setVideoURI(Uri.parse(currentMedia?.path))
-            videoView.setOnPreparedListener {
+            videoView.setOnPreparedListener { player ->
 
                 if(currentMedia == null){
-                    it.release()
+                    player.release()
                     return@setOnPreparedListener
                 }
 
-                it.start()
+                mediaPlayer = player
+
+                player.start()
                 ivPlay.setImageResource(R.drawable.ic_pause)
 
                 if (!isPlaying) {
-                    it.pause()
+                    player.pause()
                     ivPlay.setImageResource(R.drawable.ic_play)
                 }
 
-                it.setOnCompletionListener {
+                player.setOnCompletionListener {
                     //recyclerView.scrollTo(itemWidth, 0)
                     scrollOrdered = false
                     if (!isPlaying) {
@@ -663,23 +731,89 @@ class EditActivity : AppCompatActivity(),
                 }
 
                 ivPlay.setOnClickListener { _ ->
-                    Log.d("seeker_position_1", "" + it.currentPosition)
-                    if (it.isPlaying) {
-                        isPlaying = false
-                        ivPlay.setImageResource(R.drawable.ic_play)
-                        it.pause()
-                        recyclerBitmaps.stopScroll()
+                    Log.d("seeker_position_1", "" + player.currentPosition)
+                    if (player.isPlaying) {
+                        pausePlayer()
                     }
                     else {
-                        isScrolling = false
-                        isPlaying = true
-                        ivPlay.setImageResource(R.drawable.ic_pause)
-                        it.start()
-                        playingListener()
+                        resumePlayer()
                     }
                     Log.d("playButton", "currentPosition :" + videoView.currentPosition)
                 }
+
+                // Fast Forward
+                findViewById<ImageView>(R.id.iv_forward).setOnClickListener {
+                    val duration = player.duration
+                    var forwardPosition = videoView.currentPosition + 10 * 1000
+                    if (forwardPosition > duration)
+                        forwardPosition = duration
+                    videoView.seekTo(forwardPosition)
+
+//                    if (!player.isPlaying) {
+//                        resumePlayer()
+//                        Handler(Looper.getMainLooper()).postDelayed({
+//                            pausePlayer()
+//                        }, 500)
+//                    }
+
+                    val offset = currentMedia?.thumbList!!.size * itemWidth * 10 * 1000 / duration.toFloat()
+                    Log.e("fast-forward", "////////////// Fast-Forward: $offset, ${currentMedia?.distance!!}, $forwardPosition, $duration")
+                    recyclerBitmaps.smoothScrollBy(offset.toInt(), 0)
+                }
+
+                // Fast Rewind
+                findViewById<ImageView>(R.id.iv_rewind).setOnClickListener {
+                    var rewindPosition = videoView.currentPosition - 10 * 1000
+                    if (rewindPosition < 0)
+                        rewindPosition = 0
+                    videoView.seekTo(rewindPosition)
+
+//                    if (!player.isPlaying) {
+//                        resumePlayer()
+//                        Handler(Looper.getMainLooper()).postDelayed({
+//                            pausePlayer()
+//                        }, 500)
+//                    }
+
+                    var offset = (currentMedia?.thumbList!!.size * itemWidth * 10 * 1000 / player.duration.toFloat()).toInt()
+                    Log.e("fast-forward", "////////////// Fast-Rewind: $offset, ${currentMedia?.distance!!}, $rewindPosition, ${player.duration}")
+                    val currentOffset = recyclerBitmaps.computeHorizontalScrollOffset()
+                    if (currentOffset < offset)
+                        offset = currentOffset
+                    recyclerBitmaps.smoothScrollBy(-offset, 0)
+                }
             }
+        }
+    }
+
+    private fun pausePlayer() {
+        if (mediaPlayer == null)
+            return
+
+        isPlaying = false
+        ivPlay.setImageResource(R.drawable.ic_play)
+        if (mediaPlayer != null && mediaPlayer!!.isPlaying)
+            mediaPlayer!!.pause()
+        recyclerBitmaps.stopScroll()
+    }
+
+    private fun resumePlayer() {
+        if (mediaPlayer == null)
+            return
+
+        isScrolling = false
+        isPlaying = true
+        ivPlay.setImageResource(R.drawable.ic_pause)
+        mediaPlayer!!.start()
+        playingListener()
+    }
+
+    private fun playReverse(player: MediaPlayer, interval: Int) {
+        val currentPosition = player.currentPosition
+        if (currentPosition > 0) {
+            player.pause()
+            videoView.seekTo(currentPosition - interval)
+            player.start()
         }
     }
 
@@ -704,9 +838,6 @@ class EditActivity : AppCompatActivity(),
     }
 
     private fun playerInfo() {
-        Log.d("playerInfo", "isPlaying: " + videoView.isPlaying)
-        Log.d("playerInfo", "isPlaying: $isPlaying")
-        Log.d("initValues", "tvCurrentTime: " + videoView.currentPosition)
         tvCurrentTime.text = MomentsAdapter(this@EditActivity).getTimeDuration(
             videoView.currentPosition.toDouble().div(
                 1000
@@ -717,19 +848,20 @@ class EditActivity : AppCompatActivity(),
                 scrollOrdered = true
                 currentMedia?.distance = currentMedia?.thumbList!!.size * itemWidth
 
+                // Remain Pixels
                 val distance = currentMedia?.distance!! + currentMedia?.computeStartPixel(mediaList)!! - totalPixels
-                currentMedia?.speed =
-                    ((currentMedia?.duration!!.toFloat() - videoView.currentPosition.toFloat())
-                            / distance.toFloat())
+                // Remain Time (Milliseconds)
+                val remainTime = currentMedia?.duration!!.toFloat() - videoView.currentPosition.toFloat()
+                currentMedia?.speed = remainTime / distance.toFloat()
 
-                Log.d("mainScroller", "speed:" + currentMedia?.speed)
-                Log.d("mainScroller", "duration:" + currentMedia?.duration)
-                Log.d("mainScroller", "duration:" + videoView.duration)
-                Log.d("mainScroller", "distance:" + currentMedia?.distance)
-                Log.d("mainScroller", "startPosition:$scrollingPosition")
-                Log.d("mainScroller", "endPosition:" + (scrollingPosition + 1))
+                Log.e("remainTime", "///////// ${currentMedia?.distance!!}, ${currentMedia?.computeStartPixel(mediaList)!!}, ${totalPixels}")
 
-                scrollTo(currentMedia?.id!! + 1, currentMedia?.speed!!, (distance * -1))
+                if (playbackSpeed < 0) {
+                    scrollTo(currentMedia?.speed!!, distance)
+                }
+                else {
+                    scrollTo(currentMedia?.speed!!, -distance)
+                }
             }
 
             playingListener()
@@ -741,7 +873,8 @@ class EditActivity : AppCompatActivity(),
         }
     }
 
-    private fun scrollTo(position: Int, speed: Float, distance: Int) {
+    private fun scrollTo(speed: Float, distance: Int) {
+        Log.e("scrollTo", "========= $speed = $distance")
         val linearSmoothScroller: LinearSmoothScroller = object : LinearSmoothScroller(this) {
             override fun calculateSpeedPerPixel(displayMetrics: DisplayMetrics?): Float {
                 return speed
@@ -763,7 +896,7 @@ class EditActivity : AppCompatActivity(),
             }
         }
         mainScrollHandler.post {
-            linearSmoothScroller.targetPosition = position
+            linearSmoothScroller.targetPosition = 1 // To the second item
             linearLayoutManager.startSmoothScroll(linearSmoothScroller)
         }
     }
@@ -796,6 +929,8 @@ class EditActivity : AppCompatActivity(),
                     mainScrollHandler.post {
                         recyclerBitmaps.smoothScrollToPosition(mediaList.size - 1)
                     }
+                    // First Tab
+                    shuttleFragment.setMedia(sender = currentMedia)
                 }
                 else {
                     currentMedia = null
@@ -983,6 +1118,81 @@ class EditActivity : AppCompatActivity(),
         Handler(Looper.getMainLooper()).postDelayed({
             onVideoSetup(media.path ?: "")
         }, 500)
+    }
+
+    // TODO: ShuttleFragment.ShuttleFragmentListener
+
+    override fun onShuttleLoading(isLoading: Boolean) {
+        if (isLoading)
+            showLoading()
+        else
+            hideLoading()
+    }
+
+    override fun onApplyShuttle(list: ArrayList<Media>) {
+        if (list.isEmpty())
+            return
+        val media = list[0]
+        Handler(Looper.getMainLooper()).postDelayed({
+            onVideoSetup(media.path ?: "")
+        }, 500)
+    }
+
+    private val reverseHandler = Handler()
+
+    override fun onPlaybackSpeed(speed: Float) {
+        if (mediaPlayer == null)
+            return;
+
+        playbackSpeed = speed
+
+        if (speed == 0f) {
+            reverseHandler.removeCallbacks(runnable)
+
+            pausePlayer()
+        }
+        else {
+            if (speed > 0) {
+                // Set the playback speed
+                val params = PlaybackParams()
+                params.speed = speed // 1.5x speed
+                mediaPlayer!!.playbackParams = params
+
+                resumePlayer()
+            }
+            else {
+                // Set the playback speed
+                val params = PlaybackParams()
+                params.speed = 0f // 1.5x speed
+                mediaPlayer!!.playbackParams = params
+
+                reverseInterval = if (speed == -0.25f) {
+                    25
+                } else if (speed == -0.5f) {
+                    50
+                } else {
+                    100
+                }
+
+                isScrolling = false
+                isPlaying = true
+                ivPlay.setImageResource(R.drawable.ic_pause)
+                playingListener()
+
+                reverseHandler.removeCallbacks(runnable)
+                reverseHandler.postDelayed(runnable, 1000 / 30)
+            }
+        }
+    }
+
+    private var playbackSpeed: Float = 0f
+    private var reverseInterval: Int = 0
+    private val runnable = object : Runnable {
+        override fun run() {
+//            Log.e("playReverse", "===================== playReverse")
+            playReverse(player = mediaPlayer!!, interval = reverseInterval)
+            reverseHandler.postDelayed(this, 1000 / 30) // Update 30 times per second
+        }
     }
 
 }

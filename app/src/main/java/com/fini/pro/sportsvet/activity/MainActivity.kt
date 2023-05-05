@@ -69,6 +69,7 @@ class MainActivity : AppCompatActivity() {
         llChooseLibrary.setOnClickListener {
             actionType = ActionType.GALLERY
             presentGallery()
+//            startActivity(Intent(this, DemoActivity::class.java))
         }
     }
 

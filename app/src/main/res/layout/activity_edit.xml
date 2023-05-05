@@ -72,7 +72,7 @@
 
 	<RelativeLayout
 		android:layout_width="match_parent"
-		android:layout_height="@dimen/_200sdp"
+		android:layout_height="@dimen/_160sdp"
 		android:layout_marginTop="@dimen/_10sdp"
 		android:orientation="vertical">
 
@@ -110,7 +110,7 @@
 				android:contentDescription="@string/app_name"
 				android:layout_width="@dimen/_30sdp"
 				android:layout_height="match_parent"
-				android:layout_marginStart="@dimen/_15sdp"
+				android:layout_marginStart="@dimen/_10sdp"
 				android:padding="@dimen/_8sdp"
 				android:src="@drawable/ic_undo_disable"/>
 
@@ -126,13 +126,46 @@
 				tools:ignore="ImageContrastCheck" />
 
 			<ImageView
-				android:id="@+id/iv_play"
+				android:id="@+id/iv_speed"
 				android:layout_width="@dimen/_30sdp"
 				android:layout_height="match_parent"
+				android:layout_toEndOf="@id/iv_redo"
+				android:layout_marginStart="@dimen/_5sdp"
+				android:contentDescription="@string/app_name"
+				android:padding="@dimen/_3sdp"
+				android:src="@drawable/speed_purple"
+				tools:ignore="ImageContrastCheck" />
+
+			<ImageView
+				android:id="@+id/iv_rewind"
+				android:layout_toStartOf="@id/iv_play"
+				android:layout_width="@dimen/_30sdp"
+				android:layout_marginEnd="@dimen/_5sdp"
+				android:layout_height="match_parent"
+				android:contentDescription="@string/app_name"
+				android:padding="@dimen/_3sdp"
+				android:src="@drawable/ic_fast_rewind" />
+
+			<ImageView
+				android:id="@+id/iv_play"
+				android:layout_toStartOf="@id/iv_forward"
+				android:layout_width="@dimen/_30sdp"
+				android:layout_height="match_parent"
+				android:layout_marginEnd="@dimen/_5sdp"
 				android:layout_centerInParent="true"
 				android:contentDescription="@string/app_name"
 				android:padding="@dimen/_3sdp"
 				android:src="@drawable/ic_play" />
+
+			<ImageView
+				android:id="@+id/iv_forward"
+				android:layout_toStartOf="@id/tv_position"
+				android:layout_width="@dimen/_30sdp"
+				android:layout_marginEnd="@dimen/_10sdp"
+				android:layout_height="match_parent"
+				android:contentDescription="@string/app_name"
+				android:padding="@dimen/_3sdp"
+				android:src="@drawable/ic_fast_forward" />
 
 			<TextView
 				android:id="@+id/tv_position"

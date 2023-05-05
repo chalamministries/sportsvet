@@ -15,22 +15,23 @@
 
 		<com.fini.pro.sportsvet.utils.dialView.DialView
 			android:id="@+id/dial_view"
-			android:layout_width="@dimen/_180sdp"
-			android:layout_height="@dimen/_100sdp"
-			android:layout_centerInParent="true"
+			android:layout_width="@dimen/_200sdp"
+			android:layout_height="@dimen/_200sdp"
+			android:layout_centerHorizontal="true"
+			app:centerPadding="120"
 			app:dialDirection="BOTTOM"
+			app:endColor="@color/transparent"
 			app:intervalValueOnLine="true"
+			app:leastCount="1"
+			app:lineInterval="5"
 			app:maxValue="100"
 			app:minValue="0"
-			app:paintArcColor="@color/black"
-			app:paintLineColor="@color/black"
-			app:paintTextColor="@color/black"
+			app:paintArcColor="@color/purple1"
+			app:paintLineColor="@color/purple1"
+			app:paintTextColor="@color/purple1"
 			app:startColor="@color/transparent"
-			app:endColor="@color/transparent"
-			app:tickGapAngle="3.6"
-			app:textSize="14"
-			app:leastCount="1"
-			app:lineInterval="5"/>
+			app:textSize="30"
+			app:tickGapAngle="1.8" />
 
 		<LinearLayout
 			android:layout_width="match_parent"
@@ -41,12 +42,14 @@
 			<View
 				android:layout_width="3dp"
 				android:layout_height="50dp"
-				android:background="@color/purple1"/>
+				android:background="@color/purple1"
+				android:visibility="gone"/>
 
 			<RelativeLayout
 				android:layout_width="@dimen/_30sdp"
 				android:layout_height="@dimen/_30sdp"
-				android:layout_marginTop="@dimen/_5sdp">
+				android:layout_marginTop="@dimen/_5sdp"
+				android:visibility="gone">
 				<ImageView
 					android:contentDescription="@string/app_name"
 					android:layout_width="match_parent"
@@ -75,7 +78,8 @@
 				android:fontFamily="@font/poppins_semibold"
 				android:text="Apply"
 				android:textColor="@color/white"
-				android:textSize="@dimen/_12sdp"/>
+				android:textSize="@dimen/_12sdp"
+				android:visibility="gone"/>
 
 		</LinearLayout>
 	</RelativeLayout>
